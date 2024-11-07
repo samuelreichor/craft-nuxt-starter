@@ -1,12 +1,31 @@
-dateModified: 1730996821
+dateModified: 1730998143
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: assets/images
+    type: craft\fs\Local
+    url: /assets/images
 meta:
   __names__:
+    6a9c7573-e73a-4370-8e28-d50007a36721: Entry # Entry
+    8e7ca482-4acf-4c99-a2d2-2604a8bcb88d: News # News
+    16b5d140-0ec8-4bf0-8263-d71b291e7165: Home # Home
     17b8e90a-bb07-4ebb-b17a-e9897728cdc8: 'Craft Nuxt' # Craft Nuxt
+    31f620da-7617-49ed-be03-9ff85694c893: Images # Images
+    34d5e048-0128-4fc4-abf3-0414145729f2: 'Block: Image Text' # Block: Image Text
+    49e9100f-d9e4-4289-88ec-d8711b06ef1a: 'Headline Tag' # Headline Tag
     88cdb492-76a1-4a67-902f-08ffc4de6ab8: 'Craft Nuxt' # Craft Nuxt
+    613e3fb4-ca6e-40cb-81f9-dfb72e3f0484: Text # Text
+    677c0116-c363-4e74-b5ab-87aaeaaf261d: 'Content Builder' # Content Builder
+    03765a14-8035-4d3a-bada-9ec41b6f99e5: Asset # Asset
+    27541a86-a923-489e-a772-e7081c0ec88a: 'Entry: Default' # Entry: Default
+    b0d48687-1e44-4d17-a816-07ef88cf30de: 'Block: Headline' # Block: Headline
 system:
   edition: solo
   live: true

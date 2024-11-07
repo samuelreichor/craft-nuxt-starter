@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 27541a86-a923-489e-a772-e7081c0ec88a # Entry: Default
+handle: news
+maxAuthors: 1
+name: News
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  17b8e90a-bb07-4ebb-b17a-e9897728cdc8: # Craft Nuxt
+    enabledByDefault: true
+    hasUrls: true
+    template: news/_entry.twig
+    uriFormat: 'news/{slug}'
+type: channel

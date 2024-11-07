@@ -1,0 +1,76 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  995bfff2-93ee-4973-b1b9-181628274c7c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-11-07T16:35:19+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 8e20ba56-3871-46b5-97b2-1d368ca6766d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            dateAdded: '2024-11-07T16:36:28+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            instructions: null
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: true
+            required: false
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 5b85c134-d32c-41aa-9e7d-b6b6385068af
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ae3025f8-c35a-486c-90db-f8c294c4ec70
+        userCondition: null
+fs: images
+handle: images
+name: Images
+sortOrder: 1
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

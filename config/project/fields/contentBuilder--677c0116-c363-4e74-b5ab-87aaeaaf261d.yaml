@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: contentBuilder
+instructions: null
+name: 'Content Builder'
+searchable: false
+settings:
+  createButtonLabel: null
+  entryTypes:
+    - b0d48687-1e44-4d17-a816-07ef88cf30de # Block: Headline
+    - 34d5e048-0128-4fc4-abf3-0414145729f2 # Block: Image Text
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

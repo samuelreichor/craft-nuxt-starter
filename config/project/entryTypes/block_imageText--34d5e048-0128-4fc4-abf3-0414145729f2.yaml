@@ -1,0 +1,83 @@
+color: null
+fieldLayouts:
+  adb26259-aa13-4ade-b9e9-d423196e51e9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-11-07T16:40:07+00:00'
+            elementCondition: null
+            fieldUid: 613e3fb4-ca6e-40cb-81f9-dfb72e3f0484 # Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 156ec57c-8e05-4add-9226-687607ff28d1
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2024-11-07T16:39:08+00:00'
+            elementCondition: null
+            fieldUid: 03765a14-8035-4d3a-bada-9ec41b6f99e5 # Asset
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 34a577ab-a40d-4fdf-b455-5ccb218984f7
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-11-07T16:37:35+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 59f67a5e-2968-4dd5-acf1-44c84c33f99c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c70b0b64-a33c-4b6d-99f0-2df664bfa1b4
+        userCondition: null
+handle: block_imageText
+hasTitleField: false
+icon: ''
+name: 'Block: Image Text'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{text}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
