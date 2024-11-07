@@ -1,0 +1,22 @@
+dateModified: 1730996821
+email:
+  fromEmail: samuelreichor@gmail.com
+  fromName: 'Craft Nuxt'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    17b8e90a-bb07-4ebb-b17a-e9897728cdc8: 'Craft Nuxt' # Craft Nuxt
+    88cdb492-76a1-4a67-902f-08ffc4de6ab8: 'Craft Nuxt' # Craft Nuxt
+system:
+  edition: solo
+  live: true
+  name: 'Craft Nuxt'
+  schemaVersion: 5.3.0.2
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true
