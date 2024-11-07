@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0bf13ad21b51e65cbc0d53dd656465a8",
+    "content-hash": "ee48338b5fdaeeb9428851d9eb835cd9",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -3197,6 +3197,53 @@
                 }
             ],
             "time": "2023-11-23T14:11:29+00:00"
+        },
+        {
+            "name": "samuelreichor/craft-query-api",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samuelreichor/craft-query-api.git",
+                "reference": "0ac0126f76ce116dc9d523b059f122998e7047d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samuelreichor/craft-query-api/zipball/0ac0126f76ce116dc9d523b059f122998e7047d6",
+                "reference": "0ac0126f76ce116dc9d523b059f122998e7047d6",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "craftcms/ecs": "dev-main",
+                "craftcms/phpstan": "dev-main"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "craft-query-api",
+                "name": "Craft Query API",
+                "developer": "Samuel Reichoer",
+                "documentationUrl": "https://github.com/samuelreichor/craft-query-api",
+                "class": "samuelreichoer\\queryapi\\QueryApi"
+            },
+            "autoload": {
+                "psr-4": {
+                    "samuelreichoer\\queryapi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Speeds up development in headless mode with custom fetch queries",
+            "support": {
+                "email": "samuelreichor@gmail.com",
+                "issues": "https://github.com/samuelreichor/craft-query-api/issues?state=open",
+                "source": "https://github.com/samuelreichor/craft-query-api"
+            },
+            "time": "2024-10-31T08:32:02+00:00"
         },
         {
             "name": "seld/cli-prompt",
