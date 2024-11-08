@@ -1,4 +1,4 @@
-dateModified: 1731011270
+dateModified: 1731077066
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -21,11 +21,13 @@ meta:
     34d5e048-0128-4fc4-abf3-0414145729f2: 'Block: Image Text' # Block: Image Text
     49e9100f-d9e4-4289-88ec-d8711b06ef1a: 'Headline Tag' # Headline Tag
     88cdb492-76a1-4a67-902f-08ffc4de6ab8: 'Craft Nuxt' # Craft Nuxt
+    94a69073-ffd1-4bc0-a6fb-703072ae99fa: 'Block: Author' # Block: Author
     613e3fb4-ca6e-40cb-81f9-dfb72e3f0484: Text # Text
     677c0116-c363-4e74-b5ab-87aaeaaf261d: 'Content Builder' # Content Builder
     03765a14-8035-4d3a-bada-9ec41b6f99e5: Asset # Asset
     27541a86-a923-489e-a772-e7081c0ec88a: 'Entry: Default' # Entry: Default
     b0d48687-1e44-4d17-a816-07ef88cf30de: 'Block: Headline' # Block: Headline
+    f58e1976-da02-4678-93be-a8def53fbc4e: 'Select Users' # Select Users
 plugins:
   craft-query-api:
     edition: standard
