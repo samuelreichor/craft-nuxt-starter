@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee48338b5fdaeeb9428851d9eb835cd9",
+    "content-hash": "9ffe1947197f482c396f9c06bcd0927d",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -3200,16 +3200,16 @@
         },
         {
             "name": "samuelreichor/craft-query-api",
-            "version": "1.0.3",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/samuelreichor/craft-query-api.git",
-                "reference": "0ac0126f76ce116dc9d523b059f122998e7047d6"
+                "reference": "0fe0a6d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samuelreichor/craft-query-api/zipball/0ac0126f76ce116dc9d523b059f122998e7047d6",
-                "reference": "0ac0126f76ce116dc9d523b059f122998e7047d6",
+                "url": "https://api.github.com/repos/samuelreichor/craft-query-api/zipball/0fe0a6d0",
+                "reference": "0fe0a6d0",
                 "shasum": ""
             },
             "require": {
@@ -3243,7 +3243,7 @@
                 "issues": "https://github.com/samuelreichor/craft-query-api/issues?state=open",
                 "source": "https://github.com/samuelreichor/craft-query-api"
             },
-            "time": "2024-10-31T08:32:02+00:00"
+            "time": "2024-11-08T12:31:53+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -7861,7 +7861,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "samuelreichor/craft-query-api": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {},
