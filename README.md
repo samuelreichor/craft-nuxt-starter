@@ -35,6 +35,10 @@ ddev launch
 cd ./fronend && npm install && npm run dev
 ```
 
+### 5. Set env vars
+
+To fetch from nuxt to a self signed ddev server you have to use `NODE_TLS_REJECT_UNAUTHORIZED=0`. To use it just activate the `.env.example` by deleting the `.example` in the file name.
+
 ## More Information
 
 You can find more information on [samuelreichor.at](https://samuelreichor.at/libraries)
