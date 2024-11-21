@@ -70,7 +70,7 @@ fieldLayouts:
         name: Content
         uid: 9033fae6-572b-452f-ba3b-3f81ae69fc26
         userCondition: null
-handle: blockAuthor
+handle: block_author
 hasTitleField: true
 icon: ''
 name: 'Block: Author'

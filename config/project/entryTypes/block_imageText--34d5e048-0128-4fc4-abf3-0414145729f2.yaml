@@ -78,6 +78,6 @@ showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{text}'
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -3,7 +3,7 @@
   "prefer-stable": true,
   "require": {
     "craftcms/cms": "^5.0.0",
-    "samuelreichor/craft-query-api": "dev-develop#0fe0a6d0",
+    "samuelreichor/craft-query-api":"1.1.1",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
