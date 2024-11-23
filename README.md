@@ -25,7 +25,7 @@ ddev import-db --file=./databases/starter-db.sql
 
 ### 3. Launch Craft Control Panel
 ```bash
-ddev launch
+ddev launch admin
 ```
 
 **You can access it with these credentials:**
