@@ -1,4 +1,4 @@
-baseUrl: '@preview'
+baseUrl: '@website'
 enabled: true
 handle: en
 hasUrls: true

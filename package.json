@@ -1,0 +1,17 @@
+{
+  "name": "craft-nuxt-starter",
+  "private": true,
+  "author": {
+    "email": "samuelreichor@gmail.com",
+    "name": "Fredmansky",
+    "url": "https://samuelreichor.at/libraries/craft-query-api"
+  },
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "start": "ddev start && ddev launch /admin && npm run dev",
+    "build": "npm run build --workspace=frontend",
+    "dev": "npm run dev --workspace=frontend"
+  }
+}

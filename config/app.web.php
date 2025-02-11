@@ -1,4 +1,5 @@
 <?php
+use craft\helpers\App;
 
 return [
   'as corsFilter' => [
@@ -7,7 +8,7 @@ return [
     // Add your origins here
     'cors' => [
         'Origin' => [
-          'http://localhost:3000',
+          App::env('WEBSITE_URL'),
         ],
         'Access-Control-Request-Method' => ['GET'],
         'Access-Control-Request-Headers' => ['*'],
