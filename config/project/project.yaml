@@ -1,4 +1,4 @@
-dateModified: 1736440741
+dateModified: 1739299167
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -16,7 +16,7 @@ meta:
     6a9c7573-e73a-4370-8e28-d50007a36721: Entry # Entry
     8e7ca482-4acf-4c99-a2d2-2604a8bcb88d: News # News
     16b5d140-0ec8-4bf0-8263-d71b291e7165: Home # Home
-    17b8e90a-bb07-4ebb-b17a-e9897728cdc8: 'Craft Nuxt' # Craft Nuxt
+    17b8e90a-bb07-4ebb-b17a-e9897728cdc8: EN # EN
     31f620da-7617-49ed-be03-9ff85694c893: Images # Images
     34d5e048-0128-4fc4-abf3-0414145729f2: 'Block: Image Text' # Block: Image Text
     49e9100f-d9e4-4289-88ec-d8711b06ef1a: 'Headline Tag' # Headline Tag

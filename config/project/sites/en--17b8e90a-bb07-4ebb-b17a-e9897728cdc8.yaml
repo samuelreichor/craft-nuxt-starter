@@ -1,9 +1,9 @@
-baseUrl: '@website'
+baseUrl: '@preview'
 enabled: true
-handle: default
+handle: en
 hasUrls: true
-language: en-US
-name: 'Craft Nuxt'
+language: en
+name: EN
 primary: true
 siteGroup: 88cdb492-76a1-4a67-902f-08ffc4de6ab8 # Craft Nuxt
 sortOrder: 1
