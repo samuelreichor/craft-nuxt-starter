@@ -1,0 +1,66 @@
+<script setup lang="ts">
+  type QuickEditResp = {
+    canEdit: boolean,
+    linkText?: string,
+    target?: '_self' | '_blank',
+    editUrl?: string
+  }
+
+  const quickEditData = ref<QuickEditResp | null>(null)
+  const fallbackIcon = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+    <path fill="currentColor"
+      d="M5 19h1.425L16.2 9.225L14.775 7.8L5 17.575zm-2 2v-4.25L16.2 3.575q.3-.275.663-.425t.762-.15t.775.15t.65.45L20.425 5q.3.275.438.65T21 6.4q0 .4-.137.763t-.438.662L7.25 21zM19 6.4L17.6 5zm-3.525 2.125l-.7-.725L16.2 9.225z"/>
+  </svg>
+  `
+
+  onMounted(async () => {
+    if (!document.cookie.includes('logged-in=')) {
+      return
+    }
+
+    const route = useRoute()
+    const routePath = route.path === '/' ? '__home__' : route.path.slice(1)
+    const siteUrl = useRuntimeConfig().public.primarySiteUrl
+    const apiUrl = siteUrl + '/actions/quick-edit/default/get-quick-edit?uri=' + encodeURIComponent(routePath)
+
+    try {
+      const response = await fetch(apiUrl)
+      quickEditData.value = await response.json()
+    } catch (err) {
+      console.error('Quick Edit Error:', err)
+    }
+  })
+</script>
+
+<template>
+  <div v-if="quickEditData?.canEdit" class="quick-edit">
+    <a
+        :target="quickEditData.target ?? '_self'"
+        :href="quickEditData.editUrl"
+        title="Edit Page"
+        v-html="quickEditData.linkText?.trim() ? quickEditData.linkText : fallbackIcon"
+    />
+  </div>
+</template>
+
+<style scoped>
+.quick-edit {
+  a {
+    position: fixed;
+    display: flex;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 1000;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: opacity 300ms;
+  }
+  a:hover {
+    opacity: 0.85;
+  }
+}
+</style>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d17f657a50bd8ecf9080b8c647e4219b",
+    "content-hash": "b73d85c571f7b89294be14e12b12de9d",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2600,6 +2600,58 @@
                 "source": "https://github.com/samuelreichor/craft-query-api"
             },
             "time": "2025-01-09T16:49:56+00:00"
+        },
+        {
+            "name": "samuelreichor/craft-quick-edit",
+            "version": "5.0.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samuelreichor/craft-quick-edit/zipball/05868cb45f93757e2b5e53d07667b632156bb1be",
+                "reference": "05868cb45f93757e2b5e53d07667b632156bb1be",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "php": ">=8.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "quick-edit",
+                "name": "Quick Edit",
+                "developer": "Samuel Reichör",
+                "documentationUrl": "https://samuelreichor.at/libraries/craft-quick-edit",
+                "class": "samuelreichor\\quickedit\\QuickEdit"
+            },
+            "autoload": {
+                "psr-4": {
+                    "samuelreichor\\quickedit\\": "src/"
+                }
+            },
+            "license": [
+                "mit"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Reichör",
+                    "homepage": "https://samuelreichor.at/libraries"
+                }
+            ],
+            "description": "A plugin that adds a cp edit url to the frontend.",
+            "keywords": [
+                "craft-plugin",
+                "craftcms",
+                "edit page link",
+                "enhence author experience",
+                "quick edit"
+            ],
+            "support": {
+                "email": "samuelreichor@gmail.com",
+                "issues": "https://github.com/samuelreichor/craft-quick-edit/issues?state=open",
+                "source": "https://github.com/samuelreichor/craft-quick-edit",
+                "docs": "https://github.com/samuelreichor/craft-quick-edit",
+                "rss": "https://github.com/samuelreichor/craft-quick-edit/releases.atom"
+            },
+            "time": "2025-01-26T19:19:35+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -5905,11 +5957,11 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.2"
     },
