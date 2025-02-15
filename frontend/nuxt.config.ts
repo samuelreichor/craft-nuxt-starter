@@ -6,8 +6,30 @@ export default defineNuxtConfig({
 
   modules: ['nuxt-craftcms'],
 
+  devServer: {
+    host: '0.0.0.0',
+    port: 3000
+  },
+
+  vite: {
+    server: {
+      hmr: {
+        protocol: 'wss'
+      }
+    }
+  },
+
+  nitro: {
+    devServer: {
+      watch: ['./server']
+    }
+  },
+  experimental: {
+    payloadExtraction: false
+  },
+
   craftcms: {
-    baseUrl: 'https://craft-nuxt-starter.ddev.site:8443',
+    baseUrl: 'https://api.craft-nuxt-starter.ddev.site',
     debug: true,
   },
 })

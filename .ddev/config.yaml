@@ -2,20 +2,28 @@ name: craft-nuxt-starter
 type: craftcms
 docroot: web
 php_version: "8.2"
+nodejs_version: "20"
 webserver_type: nginx-fpm
 xdebug_enabled: false
 additional_hostnames:
-  - frontend.ddev-craft-nuxt
-additional_fqdns: []
+  - api.craft-nuxt-starter
 database:
-    type: mysql
-    version: "8.0"
+  type: mysql
+  version: "8.0"
 use_dns_when_possible: true
 composer_version: "2"
-web_environment: []
 corepack_enable: false
-router_http_port: 8080
-router_https_port: 8443
+upload_dirs:
+  - uploads
+web_extra_exposed_ports:
+  - name: nuxt
+    container_port: 3000
+    http_port: 3000
+    https_port: 3001
+web_environment:
+  - VIRTUAL_HOST=craft-nuxt-starter.ddev.site,api.craft-nuxt-starter.ddev.site
+  - CRAFT_CMD_ROOT=/var/www/html
+
 
 # Key features of DDEV's config.yaml:
 

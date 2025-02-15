@@ -12,7 +12,6 @@
   "dependencies": {
     "nuxt": "^3.14.159",
     "nuxt-craftcms": "0.2.2",
-    "vue": "latest",
-    "vue-router": "latest"
+    "vue": "latest"
   }
 }

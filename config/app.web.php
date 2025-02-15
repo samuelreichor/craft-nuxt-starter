@@ -8,7 +8,7 @@ return [
     // Add your origins here
     'cors' => [
         'Origin' => [
-          App::env('WEBSITE_URL'),
+          App::env('PRIMARY_SITE_URL'),
         ],
         'Access-Control-Request-Method' => ['GET'],
         'Access-Control-Request-Headers' => ['*'],
