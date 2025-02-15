@@ -1,4 +1,4 @@
-dateModified: 1739612205
+dateModified: 1739621289
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -30,6 +30,10 @@ meta:
     f58e1976-da02-4678-93be-a8def53fbc4e: 'Select Users' # Select Users
 plugins:
   craft-query-api:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  quick-edit:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
