@@ -5,8 +5,6 @@ php_version: "8.2"
 nodejs_version: "20"
 webserver_type: nginx-fpm
 xdebug_enabled: false
-additional_hostnames:
-  - api.craft-nuxt-starter
 database:
   type: mysql
   version: "8.0"
@@ -20,9 +18,9 @@ web_extra_exposed_ports:
     container_port: 3000
     http_port: 3000
     https_port: 3001
-web_environment:
-  - VIRTUAL_HOST=craft-nuxt-starter.ddev.site,api.craft-nuxt-starter.ddev.site
-  - CRAFT_CMD_ROOT=/var/www/html
+hooks:
+  post-start:
+    - exec: "npm run dev"
 
 
 # Key features of DDEV's config.yaml:

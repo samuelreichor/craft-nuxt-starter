@@ -28,8 +28,15 @@ export default defineNuxtConfig({
     payloadExtraction: false
   },
 
+  runtimeConfig: {
+    public: {
+      environment: '',
+      primarySiteUrl: '',
+    },
+  },
+
   craftcms: {
-    baseUrl: 'https://api.craft-nuxt-starter.ddev.site',
+    baseUrl: process.env.NUXT_PRIMARY_SITE_URL,
     debug: true,
   },
 })
