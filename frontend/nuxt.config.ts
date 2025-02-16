@@ -1,10 +1,12 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-/* console.log(process.env.DDEV_HOSTNAME) */
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
 
   modules: ['nuxt-craftcms'],
+
+  css: ['~/assets/css/main.css'],
 
   devServer: {
     host: '0.0.0.0',
@@ -12,6 +14,9 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    plugins: [
+      tailwindcss(),
+    ],
     server: {
       hmr: {
         protocol: 'wss'

@@ -1,0 +1,109 @@
+.ck.ck.ck-content,
+.c-text--richText {
+  h2 {
+    padding-top: 0.75rem;
+    margin-bottom: 1.25rem;
+
+    @screen md {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  h3 {
+    padding-top: 0.25rem;
+    margin-bottom: 1rem;
+
+    @screen md {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  h4 {
+    margin-bottom: 0.5rem;
+
+    @screen md {
+      margin-bottom: 1rem;
+    }
+  }
+
+  h5 {
+    margin-bottom: 0.5rem;
+
+    @screen md {
+      margin-bottom: 1rem;
+    }
+  }
+
+  h6 {
+    margin-bottom: 0.25rem;
+
+    @screen md {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  div,
+  ul,
+  ol,
+  p {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    li {
+      position: relative;
+      list-style-type: none;
+      padding-left: 1.5rem;
+
+      &:before {
+        position: absolute;
+        content: '';
+        top: 0.625rem;
+        left: 0.625rem;
+        width: 0.25rem;
+        height: 0.25rem;
+        border-radius: 100%;
+        background-color: var('--colors-black');
+      }
+    }
+  }
+
+  ol {
+    position: relative;
+    list-style: none;
+    counter-reset: ol-counter;
+    padding-left: 1.5rem;
+
+    li {
+      counter-increment: ol-counter;
+
+      &::before {
+        content: counter(ol-counter) '. ';
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  ul,
+  ol {
+    li:not(:last-child) {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    @apply transition-colors;
+
+    &:hover {
+      color: var(--colors-primary)
+    }
+  }
+
+  *:last-child {
+    margin-bottom: 0 !important;
+  }
+}

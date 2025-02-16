@@ -9,7 +9,6 @@
  */
 
 use craft\config\GeneralConfig;
-use craft\helpers\App;
 
 return GeneralConfig::create()
     ->defaultWeekStartDay(1)
@@ -19,6 +18,5 @@ return GeneralConfig::create()
     ->headlessMode(true)
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
-        '@website' => App::env('WEBSITE_URL'),
     ])
 ;

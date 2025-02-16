@@ -1,9 +1,15 @@
 <script setup lang="ts">
   import { CraftNotImplemented, type Config } from 'vue-craftcms'
-  import Home from '~/templates/pages/home.vue';
-/*  import News from '~/templates/pages/news.vue'; */
 
-  import Headline from '~/templates/components/headline.vue'
+  // Pages
+  import Home from '~/templates/pages/home.vue';
+
+  // Components
+  import ImageText from '~/templates/components/ImageText.vue';
+  import RichText from "~/templates/components/RichText.vue";
+  import Headline from "~/templates/components/Headline.vue"
+  import Authors from "~/templates/components/Authors.vue"
+
 
   // Map your Craft CMS data to your vue components and pages
   const mapping: Config = {
@@ -12,8 +18,9 @@
       'news:entry_default': CraftNotImplemented,
     },
     components: {
-      'block_imageText': CraftNotImplemented,
-      'block_author': CraftNotImplemented,
+      'block_imageText': ImageText,
+      'block_richText': RichText,
+      'block_author': Authors,
       'block_headline': Headline,
     }
   };
@@ -29,7 +36,5 @@
 </script>
 
 <template>
-  <div>
-    <CraftPage v-if="data" :config="mapping" :content="data" />
-  </div>
+  <CraftPage v-if="data" :config="mapping" :content="data" />
 </template>

@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@import './base/modern-css-reset.css';
+@import './base/global.css';
+@import './base/headings.css';
+
+@import '~/components/RichText/RichText.css';

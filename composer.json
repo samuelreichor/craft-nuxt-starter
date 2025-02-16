@@ -2,9 +2,12 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/cms": "5.6.5.1",
+    "craftcms/ckeditor": "^4.5.0",
+    "craftcms/cms": "5.6.6",
+    "nystudio107/craft-seomatic": "^5.1.11",
     "samuelreichor/craft-query-api": "1.1.4",
     "samuelreichor/craft-quick-edit": "5.0.2",
+    "spacecatninja/imager-x": "5.1.1",
     "vlucas/phpdotenv": "5.6.1"
   },
   "require-dev": {

@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: text
+handle: headline
 instructions: null
-name: Text
+name: Headline
 searchable: false
 settings:
   byteLimit: null
