@@ -1,4 +1,9 @@
 <template>
-  <NuxtPage/>
-  <UtilsQuickEdit/>
+  <NuxtLayout>
+    <template #navigation>
+    </template>
+    <NuxtPage/>
+    <template #footer>
+    </template>
+  </NuxtLayout>
 </template>

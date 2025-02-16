@@ -8,7 +8,7 @@ fieldLayouts:
           -
             dateAdded: '2024-11-07T16:40:07+00:00'
             elementCondition: null
-            fieldUid: 613e3fb4-ca6e-40cb-81f9-dfb72e3f0484 # Text
+            fieldUid: 613e3fb4-ca6e-40cb-81f9-dfb72e3f0484 # Headline
             handle: null
             includeInCards: false
             instructions: null
@@ -22,9 +22,25 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2025-02-15T14:20:45+00:00'
+            elementCondition: null
+            fieldUid: 06dcc65a-0360-492d-885c-8cf26a455f95 # Rich Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 79b5d9e4-0c54-4fa5-989b-ee086597651e
+            userCondition: null
+            warning: null
+            width: 50
+          -
             dateAdded: '2024-11-07T16:39:08+00:00'
             elementCondition: null
-            fieldUid: 03765a14-8035-4d3a-bada-9ec41b6f99e5 # Asset
+            fieldUid: 03765a14-8035-4d3a-bada-9ec41b6f99e5 # Image
             handle: null
             includeInCards: false
             instructions: null
@@ -37,47 +53,17 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-          -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2024-11-07T16:37:35+00:00'
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 59f67a5e-2968-4dd5-acf1-44c84c33f99c
-            userCondition: null
-            warning: null
-            width: 100
         name: Content
         uid: c70b0b64-a33c-4b6d-99f0-2df664bfa1b4
         userCondition: null
 handle: block_imageText
 hasTitleField: false
-icon: ''
+icon: null
 name: 'Block: Image Text'
-showSlugField: true
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

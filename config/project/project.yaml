@@ -1,4 +1,4 @@
-dateModified: 1739621289
+dateModified: 1739633128
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -13,40 +13,97 @@ fs:
     url: /assets/images
 meta:
   __names__:
+    2ea68146-4f43-4108-a7fe-ac78e82d9d69: 'Block: Rich Text' # Block: Rich Text
     6a9c7573-e73a-4370-8e28-d50007a36721: Entry # Entry
+    06dcc65a-0360-492d-885c-8cf26a455f95: 'Rich Text' # Rich Text
     8e7ca482-4acf-4c99-a2d2-2604a8bcb88d: News # News
     16b5d140-0ec8-4bf0-8263-d71b291e7165: Home # Home
     17b8e90a-bb07-4ebb-b17a-e9897728cdc8: EN # EN
     31f620da-7617-49ed-be03-9ff85694c893: Images # Images
     34d5e048-0128-4fc4-abf3-0414145729f2: 'Block: Image Text' # Block: Image Text
     49e9100f-d9e4-4289-88ec-d8711b06ef1a: 'Headline Tag' # Headline Tag
+    56ac54ae-5bb8-4d51-9e2a-940afa549231: Simple # Simple
     88cdb492-76a1-4a67-902f-08ffc4de6ab8: 'Craft Nuxt' # Craft Nuxt
     94a69073-ffd1-4bc0-a6fb-703072ae99fa: 'Block: Author' # Block: Author
-    613e3fb4-ca6e-40cb-81f9-dfb72e3f0484: Text # Text
+    613e3fb4-ca6e-40cb-81f9-dfb72e3f0484: Headline # Headline
     677c0116-c363-4e74-b5ab-87aaeaaf261d: 'Content Builder' # Content Builder
-    03765a14-8035-4d3a-bada-9ec41b6f99e5: Asset # Asset
+    03765a14-8035-4d3a-bada-9ec41b6f99e5: Image # Image
     27541a86-a923-489e-a772-e7081c0ec88a: 'Entry: Default' # Entry: Default
     b0d48687-1e44-4d17-a816-07ef88cf30de: 'Block: Headline' # Block: Headline
     f58e1976-da02-4678-93be-a8def53fbc4e: 'Select Users' # Select Users
 plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
   craft-query-api:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  imager-x:
+    edition: pro
+    enabled: true
+    licenseKey: RJELH9EJUI2PW5HFG9QO2TSC
+    schemaVersion: 4.0.0
   quick-edit:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: E8PB5R3UEFVL5TN7CMQ3L187
+    schemaVersion: 3.0.12
+    settings:
+      addHrefLang: true
+      addPaginatedHreflang: true
+      addXDefaultHrefLang: true
+      alwaysIncludeCanonicalUrls: false
+      cpTitlePrefix: '⚙ '
+      cspNonce: ''
+      cspScriptSrcPolicies:
+        -
+          __assoc__:
+            -
+              - policy
+              - '''self'''
+      devModeCpTitlePrefix: '🚧⚙ '
+      devModeTitlePrefix: '🚧 '
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      enableDebugToolbarPanel: true
+      enableJsonLdEndpoint: true
+      enableMetaContainerEndpoint: true
+      enableSeoFileLinkEndpoint: true
+      environment: live
+      excludeNonCanonicalUrls: false
+      generatorEnabled: true
+      headersEnabled: true
+      includeHomepageInBreadcrumbs: true
+      lowercaseCanonicalUrl: true
+      manuallySetEnvironment: false
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      metaCacheDuration: 0
+      pluginName: SEOmatic
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+      siteGroupsSeparate: true
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+      submitSitemaps: true
+      truncateDescriptionTags: true
+      truncateTitleTags: true
+      xDefaultSite: 0
 system:
-  edition: solo
+  edition: pro
   live: true
   name: 'Craft Nuxt'
   schemaVersion: 5.6.0.2
   timeZone: America/Los_Angeles
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  require2fa: false
-  requireEmailVerification: true

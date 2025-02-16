@@ -5,10 +5,28 @@ name: 'Content Builder'
 searchable: false
 settings:
   createButtonLabel: null
+  defaultIndexViewMode: cards
   entryTypes:
-    - b0d48687-1e44-4d17-a816-07ef88cf30de # Block: Headline
-    - 34d5e048-0128-4fc4-abf3-0414145729f2 # Block: Image Text
-    - 94a69073-ffd1-4bc0-a6fb-703072ae99fa # Block: Author
+    -
+      __assoc__:
+        -
+          - uid
+          - b0d48687-1e44-4d17-a816-07ef88cf30de # Block: Headline
+    -
+      __assoc__:
+        -
+          - uid
+          - 34d5e048-0128-4fc4-abf3-0414145729f2 # Block: Image Text
+    -
+      __assoc__:
+        -
+          - uid
+          - 94a69073-ffd1-4bc0-a6fb-703072ae99fa # Block: Author
+    -
+      __assoc__:
+        -
+          - uid
+          - 2ea68146-4f43-4108-a7fe-ac78e82d9d69 # Block: Rich Text
   includeTableView: false
   maxEntries: null
   minEntries: null

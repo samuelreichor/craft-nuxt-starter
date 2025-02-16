@@ -1,14 +1,14 @@
 color: null
 fieldLayouts:
-  d58fd658-c73c-4698-8391-95f39ccfc467:
+  6d72afc6-5a3e-47f9-a73e-c4708cecedbe:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-11-08T14:44:14+00:00'
+            dateAdded: '2025-02-15T14:35:10+00:00'
             elementCondition: null
-            fieldUid: f58e1976-da02-4678-93be-a8def53fbc4e # Select Users
+            fieldUid: 06dcc65a-0360-492d-885c-8cf26a455f95 # Rich Text
             handle: null
             includeInCards: false
             instructions: null
@@ -17,19 +17,19 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c522d613-d12d-4e17-ba79-8f2d47ddfc05
+            uid: 5e5547dc-29e5-4843-b0cd-b2389d4e593f
             userCondition: null
             warning: null
-            width: 50
+            width: 100
         name: Content
-        uid: 9033fae6-572b-452f-ba3b-3f81ae69fc26
+        uid: 99ea892a-b4ed-4347-89bf-c0d408174b52
         userCondition: null
-handle: block_author
+handle: block_richText
 hasTitleField: false
 icon: null
-name: 'Block: Author'
-showSlugField: true
-showStatusField: true
+name: 'Block: Rich Text'
+showSlugField: false
+showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
 titleFormat: null

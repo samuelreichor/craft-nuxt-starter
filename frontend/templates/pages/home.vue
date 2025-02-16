@@ -16,7 +16,7 @@
       type: String,
       required: true,
     },
-    asset: {
+    image: {
       type: Object,
       default: () => undefined,
     },
@@ -25,7 +25,7 @@
 
 <template>
   <div>
-    <h1>{{ props.title }}</h1>
+    <ImageText :title="props.title" :image="props.image[0]" class="!mt-0"/>
     <CraftArea v-if="props.contentBuilder" :content="props.contentBuilder" />
   </div>
 </template>
