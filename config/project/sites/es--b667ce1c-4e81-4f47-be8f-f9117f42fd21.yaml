@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL_ES
+enabled: '1'
+handle: es
+hasUrls: true
+language: es
+name: ES
+primary: false
+siteGroup: 88cdb492-76a1-4a67-902f-08ffc4de6ab8 # Craft Nuxt
+sortOrder: 3

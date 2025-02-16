@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { CraftNotImplemented, type Config } from 'vue-craftcms'
-
+  import { type SiteMap} from "~/utils/helper";
   // Pages
   import Home from '~/templates/pages/home.vue';
 
@@ -25,10 +25,10 @@
     }
   };
 
-  // Get current uri and fetch current entry
-  const route = useRoute()
-  const uri = route.params.slug.length > 0 ? route.params.slug : '__home__';
-  const { data, error } = await useCraftQuery('entries').uri(uri).one()
+  const absoluteUrl = useRequestURL().href;
+  const currentSite = inject<SiteMap>('currentSite')!;
+  const uri = getSiteUri(absoluteUrl, currentSite.origin)
+  const { data, error } = await useCraftQuery('entries').uri(uri).site(currentSite.handle).one()
 
   if(error.value) {
     console.error(error.value)
