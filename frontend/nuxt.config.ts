@@ -36,7 +36,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       environment: '',
-      primarySiteUrl: '',
+      primarySiteUrl: 'https://craft-nuxt-starter.ddev.site',
+      primarySiteUrlDe: 'https://craft-nuxt-starter.ddev.site/de',
+      primarySiteUrlEs: 'https://craft-nuxt-starter.ddev.site/es',
     },
   },
 

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { type SiteMap} from "~/utils/helper";
   type QuickEditResp = {
     canEdit: boolean,
     linkText?: string,
@@ -19,10 +20,10 @@
       return
     }
 
-    const route = useRoute()
-    const routePath = route.path === '/' ? '__home__' : route.path.slice(1)
-    const siteUrl = useRuntimeConfig().public.primarySiteUrl
-    const apiUrl = siteUrl + '/actions/quick-edit/default/get-quick-edit?uri=' + encodeURIComponent(routePath)
+    const absoluteUrl = useRequestURL().href;
+    const { origin } = inject<SiteMap>('currentSite')!;
+    const uri = getSiteUri(absoluteUrl, origin)
+    const apiUrl = origin + '/actions/quick-edit/default/get-quick-edit?uri=' + encodeURIComponent(uri)
 
     try {
       const response = await fetch(apiUrl)

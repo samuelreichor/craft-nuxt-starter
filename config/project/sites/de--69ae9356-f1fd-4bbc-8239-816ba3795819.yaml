@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL_DE
+enabled: '1'
+handle: de
+hasUrls: true
+language: de
+name: DE
+primary: false
+siteGroup: 88cdb492-76a1-4a67-902f-08ffc4de6ab8 # Craft Nuxt
+sortOrder: 2
