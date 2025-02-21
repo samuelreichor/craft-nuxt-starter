@@ -1,13 +1,11 @@
 <script setup lang="ts">
-  import { type SiteMap} from "~/utils/helper";
   type QuickEditResp = {
     canEdit: boolean,
-    linkText?: string,
-    target?: '_self' | '_blank',
-    editUrl?: string
+    linkText: string,
+    editUrl: string
+    target: '_self' | '_blank',
   }
 
-  const quickEditData = ref<QuickEditResp | null>(null)
   const fallbackIcon = `
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
     <path fill="currentColor"
@@ -15,23 +13,24 @@
   </svg>
   `
 
-  onMounted(async () => {
-    if (!document.cookie.includes('logged-in=')) {
-      return
-    }
+  const quickEditData = ref<QuickEditResp>();
+  const currentSite = useCraftCurrentSite()
+  const uri = useCraftUri();
+  const loggedIn = useCookie('logged-in');
+  const apiUrl = computed(() => currentSite.value.origin + '/actions/quick-edit/default/get-quick-edit?uri=' + encodeURIComponent(uri.value));
 
-    const absoluteUrl = useRequestURL().href;
-    const { origin } = inject<SiteMap>('currentSite')!;
-    const uri = getSiteUri(absoluteUrl, origin)
-    const apiUrl = origin + '/actions/quick-edit/default/get-quick-edit?uri=' + encodeURIComponent(uri)
+  const { data, error } = loggedIn && useFetch<QuickEditResp>(apiUrl, {
+    lazy: true,
+    server: false,
+  });
 
-    try {
-      const response = await fetch(apiUrl)
-      quickEditData.value = await response.json()
-    } catch (err) {
-      console.error('Quick Edit Error:', err)
-    }
-  })
+  watchEffect(() => {
+    if (data.value) quickEditData.value = data.value;
+  });
+
+  watch(error, () => {
+    if (error.value) console.error('Quick edit error:', error.value);
+  });
 </script>
 
 <template>
@@ -46,22 +45,22 @@
 </template>
 
 <style scoped>
-.quick-edit {
-  a {
-    position: fixed;
-    display: flex;
-    top: 0.5rem;
-    right: 0.5rem;
-    z-index: 1000;
-    background-color: black;
-    color: white;
-    padding: 0.5rem;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: opacity 300ms;
+  .quick-edit {
+    a {
+      position: fixed;
+      display: flex;
+      top: 0.5rem;
+      right: 0.5rem;
+      z-index: 1000;
+      background-color: black;
+      color: white;
+      padding: 0.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: opacity 300ms;
+    }
+    a:hover {
+      opacity: 0.85;
+    }
   }
-  a:hover {
-    opacity: 0.85;
-  }
-}
 </style>

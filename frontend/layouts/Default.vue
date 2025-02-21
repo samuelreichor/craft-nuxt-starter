@@ -10,5 +10,6 @@
       <slot name="footer"/>
     </footer>
   </div>
+  <!-- Show link for editing page -->
   <QuickEdit/>
 </template>

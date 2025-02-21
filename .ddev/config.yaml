@@ -13,6 +13,8 @@ composer_version: "2"
 corepack_enable: false
 upload_dirs:
   - uploads
+router_http_port: "80"
+router_https_port: "443"
 web_extra_exposed_ports:
   - name: nuxt
     container_port: 3000

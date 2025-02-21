@@ -44,6 +44,23 @@ export default defineNuxtConfig({
 
   craftcms: {
     baseUrl: process.env.NUXT_PRIMARY_SITE_URL,
-    debug: true,
+    debug: false,
+    siteMap: [
+      {
+        handle: 'en',
+        origin: process.env.NUXT_PRIMARY_SITE_URL!,
+        id: 1,
+      },
+      {
+        handle: 'de',
+        origin: process.env.NUXT_PRIMARY_SITE_URL_DE!,
+        id: 2,
+      },
+      {
+        handle: 'es',
+        origin: process.env.NUXT_PRIMARY_SITE_URL_ES!,
+        id: 3,
+      },
+    ]
   },
 })
