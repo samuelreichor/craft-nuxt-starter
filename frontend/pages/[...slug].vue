@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { CraftNotImplemented, type Config } from 'vue-craftcms'
-  import { type SiteMap} from "~/utils/helper";
+
   // Pages
   import Home from '~/templates/pages/home.vue';
 
@@ -9,7 +9,6 @@
   import RichText from "~/templates/components/RichText.vue";
   import Headline from "~/templates/components/Headline.vue"
   import Authors from "~/templates/components/Authors.vue"
-
 
   // Map your Craft CMS data to your vue components and pages
   const mapping: Config = {
@@ -25,10 +24,12 @@
     }
   };
 
-  const absoluteUrl = useRequestURL().href;
-  const currentSite = inject<SiteMap>('currentSite')!;
-  const uri = getSiteUri(absoluteUrl, currentSite.origin)
-  const { data, error } = await useCraftQuery('entries').uri(uri).site(currentSite.handle).one()
+  // Inject global uri and current site
+  const uri = useCraftUri()
+  const currentSite = useCraftCurrentSite()
+
+  // Fetch entry by uri and current site
+  const { data, error } = await useCraftQuery('entries').uri(uri.value).site(currentSite.value.handle).one()
 
   if(error.value) {
     console.error(error.value)
