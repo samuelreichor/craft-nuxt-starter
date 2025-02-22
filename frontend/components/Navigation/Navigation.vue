@@ -9,9 +9,9 @@ const links = [
     title: 'Fat Cat',
   },
 ]
-const uri = useCraftUri();
 
 function isActive(url: string) {
+  const uri = useCraftUri();
   return '/' + uri.value === url || (uri.value === '__home__' && url === '/');
 }
 </script>
