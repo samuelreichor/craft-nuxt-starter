@@ -12,8 +12,8 @@
 <template>
   <ul class="flex gap-4">
     <li v-for="site in typedSiteMap" :key="site.handle">
-      <NuxtLink :href="site.origin" :class="{ 'font-bold': currentSite.handle === site.handle }">
-        {{ site.handle }}
+      <NuxtLink :to="site.handle === 'en' ? '/' : '/' + site.handle" :class="{ 'font-bold': currentSite.handle === site.handle }">
+        {{ site.label }}
       </NuxtLink>
     </li>
   </ul>

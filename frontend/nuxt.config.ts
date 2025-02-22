@@ -50,16 +50,22 @@ export default defineNuxtConfig({
         handle: 'en',
         origin: process.env.NUXT_PRIMARY_SITE_URL!,
         id: 1,
+        lang: 'en',
+        label: 'En'
       },
       {
         handle: 'de',
         origin: process.env.NUXT_PRIMARY_SITE_URL_DE!,
         id: 2,
+        lang: 'de',
+        label: 'De'
       },
       {
         handle: 'es',
         origin: process.env.NUXT_PRIMARY_SITE_URL_ES!,
         id: 3,
+        lang: 'es',
+        label: 'Es'
       },
     ]
   },
