@@ -1,4 +1,4 @@
-dateModified: 1739726956
+dateModified: 1740332282
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -16,7 +16,9 @@ meta:
     2ea68146-4f43-4108-a7fe-ac78e82d9d69: 'Block: Rich Text' # Block: Rich Text
     6a9c7573-e73a-4370-8e28-d50007a36721: Entry # Entry
     06dcc65a-0360-492d-885c-8cf26a455f95: 'Rich Text' # Rich Text
+    8b86f1d3-3d68-487d-9cbb-486e32a30586: 'Entry: News' # Entry: News
     8e7ca482-4acf-4c99-a2d2-2604a8bcb88d: News # News
+    9b46253b-8924-4cb2-95b5-731480436ecc: 'Related News' # Related News
     16b5d140-0ec8-4bf0-8263-d71b291e7165: Home # Home
     17b8e90a-bb07-4ebb-b17a-e9897728cdc8: EN # EN
     31f620da-7617-49ed-be03-9ff85694c893: Images # Images
@@ -30,9 +32,12 @@ meta:
     677c0116-c363-4e74-b5ab-87aaeaaf261d: 'Content Builder' # Content Builder
     03765a14-8035-4d3a-bada-9ec41b6f99e5: Image # Image
     27541a86-a923-489e-a772-e7081c0ec88a: 'Entry: Default' # Entry: Default
+    4080139d-238b-4990-9747-dc47d0e284e8: 'Select News' # Select News
     b0d48687-1e44-4d17-a816-07ef88cf30de: 'Block: Headline' # Block: Headline
     b667ce1c-4e81-4f47-be8f-f9117f42fd21: ES # ES
     f58e1976-da02-4678-93be-a8def53fbc4e: 'Select Users' # Select Users
+    f65c8ce7-d94d-40d3-b234-a7504ef26035: 'SEO Settings' # SEO Settings
+    f646c08b-ca3c-41dd-9be9-f173a6175f5e: 'Block: Cta' # Block: Cta
 plugins:
   ckeditor:
     edition: standard
@@ -47,6 +52,10 @@ plugins:
     enabled: true
     licenseKey: RJELH9EJUI2PW5HFG9QO2TSC
     schemaVersion: 4.0.0
+  matrix-extended:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.0
   quick-edit:
     edition: standard
     enabled: true
