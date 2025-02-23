@@ -1,7 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 27541a86-a923-489e-a772-e7081c0ec88a # Entry: Default
+  -
+    uid: 8b86f1d3-3d68-487d-9cbb-486e32a30586 # Entry: News
 handle: news
 maxAuthors: 1
 name: News
@@ -22,6 +23,16 @@ siteSettings:
   17b8e90a-bb07-4ebb-b17a-e9897728cdc8: # EN
     enabledByDefault: true
     hasUrls: true
-    template: news/_entry.twig
+    template: null
     uriFormat: 'news/{slug}'
+  69ae9356-f1fd-4bbc-8239-816ba3795819: # DE
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: 'neuigkeiten/{slug}'
+  b667ce1c-4e81-4f47-be8f-f9117f42fd21: # ES
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: 'noticias/{slug}'
 type: channel
