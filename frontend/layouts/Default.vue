@@ -1,15 +1,15 @@
 <template>
   <div class="outside-container">
     <nav>
-      <slot name="navigation"/>
+      <slot name="navigation" />
     </nav>
     <main>
-      <slot/>
+      <slot />
     </main>
     <footer>
-      <slot name="footer"/>
+      <slot name="footer" />
     </footer>
+    <!-- Show link for editing page -->
+    <LazyQuickEdit />
   </div>
-  <!-- Show link for editing page -->
-  <QuickEdit/>
 </template>

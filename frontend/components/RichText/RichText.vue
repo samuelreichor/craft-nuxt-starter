@@ -1,23 +1,23 @@
 <script setup lang="ts">
-  const props = defineProps({
-    text: {
-      type: String,
-      default: () => '',
-    },
-    variant: {
-      type: String as PropType<RichTextVariant>,
-      default: () => 'base',
-    },
-  });
+const props = defineProps({
+  text: {
+    type: String,
+    default: () => '',
+  },
+  variant: {
+    type: String as PropType<RichTextVariant>,
+    default: () => 'base',
+  },
+})
 
-  const slots = useSlots();
+const slots = useSlots()
 
-  const variants = {
-    base: 'text-base',
-    large: 'text-lg',
-  };
+const variants = {
+  base: 'text-base',
+  large: 'text-lg',
+}
 
-  export type RichTextVariant = keyof typeof variants;
+export type RichTextVariant = keyof typeof variants
 </script>
 
 <template>

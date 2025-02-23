@@ -11,8 +11,8 @@ const links = [
 ]
 
 function isActive(url: string) {
-  const uri = useCraftUri();
-  return '/' + uri.value === url || (uri.value === '__home__' && url === '/');
+  const uri = useCraftUri()
+  return '/' + uri.value === url || (uri.value === '__home__' && url === '/')
 }
 </script>
 
@@ -22,8 +22,14 @@ function isActive(url: string) {
       Cat
     </NuxtLink>
     <ul class="flex gap-4 items-center">
-      <li v-for="link in links">
-        <NuxtLink :class="{'font-bold': isActive(link.url)}" :href="link.url">
+      <li
+        v-for="link in links"
+        :key="link.url"
+      >
+        <NuxtLink
+          :class="{ 'font-bold': isActive(link.url) }"
+          :href="link.url"
+        >
           {{ link.title }}
         </NuxtLink>
       </li>

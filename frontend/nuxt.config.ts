@@ -1,16 +1,43 @@
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
-  devtools: { enabled: true },
 
-  modules: ['nuxt-craftcms'],
+  modules: [
+    'nuxt-craftcms',
+    '@nuxt/eslint',
+  ],
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
 
   css: ['~/assets/css/main.css'],
 
+  runtimeConfig: {
+    public: {
+      environment: '',
+      primarySiteUrl: 'https://craft-nuxt-starter.ddev.site',
+      primarySiteUrlDe: 'https://craft-nuxt-starter.ddev.site/de',
+      primarySiteUrlEs: 'https://craft-nuxt-starter.ddev.site/es',
+    },
+  },
+
   devServer: {
     host: '0.0.0.0',
-    port: 3000
+    port: 3000,
+  },
+  experimental: {
+    crossOriginPrefetch: true,
+  },
+  compatibilityDate: '2024-04-03',
+
+  nitro: {
+    devServer: {
+      watch: ['./server'],
+    },
   },
 
   vite: {
@@ -19,26 +46,8 @@ export default defineNuxtConfig({
     ],
     server: {
       hmr: {
-        protocol: 'wss'
-      }
-    }
-  },
-
-  nitro: {
-    devServer: {
-      watch: ['./server']
-    }
-  },
-  experimental: {
-    payloadExtraction: false
-  },
-
-  runtimeConfig: {
-    public: {
-      environment: '',
-      primarySiteUrl: 'https://craft-nuxt-starter.ddev.site',
-      primarySiteUrlDe: 'https://craft-nuxt-starter.ddev.site/de',
-      primarySiteUrlEs: 'https://craft-nuxt-starter.ddev.site/es',
+        protocol: 'wss',
+      },
     },
   },
 
@@ -51,22 +60,28 @@ export default defineNuxtConfig({
         origin: process.env.NUXT_PRIMARY_SITE_URL!,
         id: 1,
         lang: 'en',
-        label: 'En'
+        label: 'En',
       },
       {
         handle: 'de',
         origin: process.env.NUXT_PRIMARY_SITE_URL_DE!,
         id: 2,
         lang: 'de',
-        label: 'De'
+        label: 'De',
       },
       {
         handle: 'es',
         origin: process.env.NUXT_PRIMARY_SITE_URL_ES!,
         id: 3,
         lang: 'es',
-        label: 'Es'
+        label: 'Es',
       },
-    ]
+    ],
+  },
+
+  eslint: {
+    config: {
+      stylistic: true,
+    },
   },
 })

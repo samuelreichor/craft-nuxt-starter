@@ -1,4 +1,4 @@
-import type { ImageObject, ImageRatio, ObjectFitValue } from './image-types';
+import type { ImageObject, ImageRatio, ObjectFitValue } from './image-types'
 
 export const sharedImageProps = {
   image: {
@@ -17,7 +17,7 @@ export const sharedImageProps = {
     type: String as PropType<ImageRatio>,
     default: () => 'auto',
   },
-};
+}
 
 export const captionProps = {
   caption: {
@@ -28,4 +28,4 @@ export const captionProps = {
     type: String,
     default: () => '',
   },
-};
+}

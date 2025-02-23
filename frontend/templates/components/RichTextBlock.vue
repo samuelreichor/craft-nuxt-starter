@@ -8,5 +8,5 @@ const props = defineProps({
 </script>
 
 <template>
-  <RichText :text="props.richText"/>
+  <RichText :text="props.richText" />
 </template>

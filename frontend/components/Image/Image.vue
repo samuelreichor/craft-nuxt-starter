@@ -1,14 +1,14 @@
 <script setup lang="ts">
-  import { sharedImageProps, captionProps } from './image-props';
+import { sharedImageProps, captionProps } from './image-props'
 
-  const props = defineProps({
-    ...sharedImageProps,
-    ...captionProps,
-    showCaption: {
-      type: Boolean,
-      default: () => false,
-    },
-  });
+const props = defineProps({
+  ...sharedImageProps,
+  ...captionProps,
+  showCaption: {
+    type: Boolean,
+    default: () => false,
+  },
+})
 </script>
 
 <template>

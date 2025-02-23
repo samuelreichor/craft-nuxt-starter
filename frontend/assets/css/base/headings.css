@@ -8,7 +8,7 @@
 .ck.ck-content,
 .c-headline,
 .c-text--richText {
-  .headline-root,
+  &.headline-root,
   h1,
   h2,
   h3,
@@ -24,15 +24,15 @@
   }
   &.h2-styling,
   h2 {
-    @apply text-4xl;
+    @apply text-3xl;
   }
   &.h3-styling,
   h3 {
-    @apply text-3xl;
+    @apply text-2xl;
   }
   &.h4-styling,
   h4 {
-    @apply text-2xl;
+    @apply text-xl;
   }
   &.h5-styling,
   h5 {
