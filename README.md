@@ -5,74 +5,34 @@ Trust me it's easy!
 ## Requirements
 
 - DDEV installed locally
+- Basic Nuxt and Craft Knowledge
 
-## Get started
+## Setup
 
-### 1. Start ddev
 ```bash
-ddev start
+./scripts/setup.sh
 ```
 
-### 2. Install Composer Packages and set up Craft
-```bash
-ddev composer install && ddev craft setup/keys
-```
+**Note:** If your frontend shows a nginx error on the first start you should refresh your Browser. 
+This happens because the setup script launches the browser before the dev process is running. 
 
-### 2. Import dummy database
-```bash
-ddev import-db --file=./databases/starter-db.sql
-```
+### Access the control panel:
+Use these credentials to access the control panel:
+- User: admin
+- Password: admin123
 
-### 3. Launch Craft Control Panel
-```bash
-ddev launch admin
-```
+## Scripts
+- `ddev fe <command>`: cd's in the frontend folder and runs the provided command.
+- `ddev npm run <command>` runs the commands in the frontend folder due to npm workspaces.
 
-**You can access it with these credentials:**
-<br>
+## Further Resources
 
->User: Admin <br>
->PW: admin123
+- [Craft Query API](https://github.com/samuelreichor/craft-query-api): The Craft CMS Plugin, that powers this great stuff.
+- [Nuxt Craft CMS](https://samuelreichor.at/libraries/nuxt-craftcms): The package used to get the query builder in Nuxt.
+- [JS Craft CMS API](https://samuelreichor.at/libraries/js-craftcms-api): `nuxt-craftcms` is built on the `js-craftcms-api`.
 
 
-### 4. Start frontend dev server
-```bash
-cd ./frontend && npm install && cp .env.example .env &&  npm run dev
-```
+## Support
 
-### 5. Set env vars
+If you encounter bugs or have feature requests, [please submit an issue](/../../issues/new). Your feedback helps improve the starter!
 
-To fetch from nuxt to a self-signed ddev server you have to use `NODE_TLS_REJECT_UNAUTHORIZED=0`. To use it just activate the `.env.example` by deleting the `.example` in the file name.
-
-## Troubleshooting
-
-### **Error: `<no response>` Fetch Failed**
-
-If you encounter the error `<no response>` while trying to fetch data, follow these steps to identify and resolve the issue:
-
-1. **Check the `baseUrl` Configuration**
-    - Open the developer console in your frontend application.
-    - Verify that the `baseUrl` property matches the value of your `PRIMARY_SITE_URL` environment variable in Craft CMS.
-    - If the `baseUrl` does not match, the API endpoint being called is incorrect. Update the [configuration](https://samuelreichor.at/libraries/nuxt-craftcms/get-started/install#configuration) to ensure both values align.
-
-2. **Validate the API Endpoint**
-    - Copy and paste the generated API URL from your application (e.g.,
-      ```
-      https://craft-nuxt-starter.ddev.site/v1/api/queryApi/customQuery?elementType=entries&uri=__home__&one=1
-      ```
-      ) into your browser.
-    - Check if the endpoint returns the expected response.
-    - If the response is correct in the browser, but your application still fails, proceed to the next step.
-
-3. **Set `NODE_TLS_REJECT_UNAUTHORIZED`**
-    - Ensure the `NODE_TLS_REJECT_UNAUTHORIZED` environment variable is properly configured.
-    - Add the following to your environment configuration:
-      ```
-      NODE_TLS_REJECT_UNAUTHORIZED=0
-      ```
-    - This is often required in local development environments where self-signed certificates or insecure HTTPS connections are used.
-
-
-## More Information
-
-You can find more information on [samuelreichor.at](https://samuelreichor.at/libraries)
