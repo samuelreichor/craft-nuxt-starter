@@ -22,7 +22,7 @@ web_extra_exposed_ports:
     https_port: 3001
 hooks:
   post-start:
-    - exec: "npm run dev"
+    - exec: "npm run dev || (rm -rf node_modules && npm install && npm run dev)"
 
 
 # Key features of DDEV's config.yaml:

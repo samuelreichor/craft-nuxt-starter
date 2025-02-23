@@ -1,4 +1,4 @@
-dateModified: 1740332282
+dateModified: 1740338385
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -50,7 +50,7 @@ plugins:
   imager-x:
     edition: pro
     enabled: true
-    licenseKey: RJELH9EJUI2PW5HFG9QO2TSC
+    licenseKey: GSUXATRK5JR3GXJNBF0L9D7P
     schemaVersion: 4.0.0
   matrix-extended:
     edition: standard
@@ -63,7 +63,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: E8PB5R3UEFVL5TN7CMQ3L187
+    licenseKey: J53980N1UAG12R3AEBOF1B16
     schemaVersion: 3.0.12
     settings:
       addHrefLang: true
