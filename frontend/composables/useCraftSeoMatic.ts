@@ -1,16 +1,16 @@
 import type { CraftSite } from 'vue-craftcms'
 
-type MetaTag = { content?: string; name?: string; property?: string }
-type MetaLink = { href: string; rel: string; hreflang?: string }
+type MetaTag = { content?: string, name?: string, property?: string }
+type MetaLink = { href: string, rel: string, hreflang?: string }
 type SeoData = {
   MetaTitleContainer?: { title?: { title: string } }
   MetaTagContainer?: Record<string, MetaTag | MetaTag[]>
   MetaLinkContainer?: Record<string, MetaLink | MetaLink[]>
-  MetaJsonLdContainer?: Record<string, any>
+  MetaJsonLdContainer?: Record<string, unknown>
 }
 
 export async function useCraftSeoMatic(uri?: string | Ref<string>, site?: CraftSite | Ref<CraftSite>) {
-  const {baseUrl, siteMap} = useRuntimeConfig().public.craftcms
+  const { baseUrl, siteMap } = useRuntimeConfig().public.craftcms
   if (siteMap.length === 0) {
     throw createError({
       statusCode: 500,
@@ -18,70 +18,70 @@ export async function useCraftSeoMatic(uri?: string | Ref<string>, site?: CraftS
     })
   }
   const currentSite = site ? ref(site) : useCraftCurrentSite()
-  const currentUri = uri? ref(uri) : useCraftUri()
+  const currentUri = uri ? ref(uri) : useCraftUri()
 
   if (!currentSite.value || !currentUri.value) {
-    return;
+    return
   }
 
   const apiEndpoint = computed(() =>
-      `${baseUrl}/actions/seomatic/meta-container/all-meta-containers/?asArray=true&uri=${encodeURIComponent(currentUri.value)}&siteId=${currentSite.value.id}`
+    `${baseUrl}/actions/seomatic/meta-container/all-meta-containers/?asArray=true&uri=${encodeURIComponent(currentUri.value)}&siteId=${currentSite.value.id}`,
   )
 
-  const {data, error} = await useFetch<SeoData>(apiEndpoint);
+  const { data, error } = await useFetch<SeoData>(apiEndpoint)
 
   if (error.value) {
     console.error(error.value)
   }
 
   watchEffect(() => {
-    if (!data.value) return;
+    if (!data.value) return
 
-    const title = data.value.MetaTitleContainer?.title?.title || '';
+    const title = data.value.MetaTitleContainer?.title?.title || ''
 
     const metaTags = Object.entries(data.value.MetaTagContainer || {})
       .flatMap(([key, tag]) => {
-        if (!tag || typeof tag !== 'object') return [];
-        if (Array.isArray(tag) && tag.length === 0) return [];
+        if (!tag || typeof tag !== 'object') return []
+        if (Array.isArray(tag) && tag.length === 0) return []
 
         if (Array.isArray(tag)) {
           return tag.map(item => ({
             hid: key + '-' + (item.content ?? ''),
             name: item.name ?? undefined,
             property: item.property ?? undefined,
-            content: item.content ?? undefined
-          }));
+            content: item.content ?? undefined,
+          }))
         }
 
         return [{
           hid: key,
           name: tag.name ?? undefined,
           property: tag.property ?? undefined,
-          content: tag.content ?? undefined
-        }];
-      });
+          content: tag.content ?? undefined,
+        }]
+      })
 
     const linkTags = Object.entries(data.value.MetaLinkContainer || {})
       .flatMap(([, tag]) => {
-        if (!tag || typeof tag !== 'object') return [];
-        if (Array.isArray(tag) && tag.length === 0) return [];
+        if (!tag || typeof tag !== 'object') return []
+        if (Array.isArray(tag) && tag.length === 0) return []
 
         if (Array.isArray(tag)) {
           return tag.map(item => ({
             rel: item.rel,
             href: item.href,
-            hreflang: item.hreflang ?? undefined
-          }));
+            hreflang: item.hreflang ?? undefined,
+          }))
         }
 
         return [{
           rel: tag.rel,
           href: tag.href,
-          hreflang: tag.hreflang ?? undefined
-        }];
-      });
+          hreflang: tag.hreflang ?? undefined,
+        }]
+      })
 
-    const jsonLd = data.value.MetaJsonLdContainer || {};
+    const jsonLd = data.value.MetaJsonLdContainer || {}
 
     useHead({
       htmlAttrs: {
@@ -93,9 +93,9 @@ export async function useCraftSeoMatic(uri?: string | Ref<string>, site?: CraftS
       script: [
         {
           type: 'application/ld+json',
-          innerHTML: JSON.stringify(jsonLd)
-        }
-      ]
-    });
-  });
+          innerHTML: JSON.stringify(jsonLd),
+        },
+      ],
+    })
+  })
 }

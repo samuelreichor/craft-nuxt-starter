@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
-@import './base/modern-css-reset.css';
-@import './base/global.css';
-@import './base/headings.css';
+@layer base {
+  @import './base/global.css';
+}
 
-@import '~/components/RichText/RichText.css';
+@layer components {
+  @import './base/headings.css';
+  @import '~/components/RichText/RichText.css';
+}

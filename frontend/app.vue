@@ -1,6 +1,6 @@
 <script setup lang="ts">
- // Fetch & apply seomatic properties 
-  useCraftSeoMatic()
+// Fetch & apply seomatic properties
+useCraftSeoMatic()
 </script>
 
 <template>
@@ -8,8 +8,7 @@
     <template #navigation>
       <Navigation />
     </template>
-    <NuxtPage/>
-    <template #footer>
-    </template>
+    <NuxtPage />
+    <template #footer />
   </NuxtLayout>
 </template>

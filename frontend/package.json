@@ -7,13 +7,22 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxi typecheck",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "npm run typecheck && npm run lint"
   },
   "dependencies": {
+    "@nuxt/eslint": "^1.1.0",
     "@tailwindcss/vite": "^4.0.6",
+    "eslint": "^9.21.0",
     "nuxt": "^3.14.159",
     "nuxt-craftcms": "0.4.0",
     "tailwindcss": "^4.0.6",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "vue-tsc": "^2.1.10"
   }
 }

@@ -10,8 +10,12 @@
     "frontend"
   ],
   "scripts": {
-    "start": "ddev start && ddev launch /admin && npm run dev",
     "build": "npm run build --workspace=frontend",
-    "dev": "npm run dev --workspace=frontend"
+    "dev": "npm run dev --workspace=frontend",
+    "preview": "npm run preview --workspace=frontend",
+    "typecheck": "npm run typecheck --workspace=frontend",
+    "lint": "npm run lint --workspace=frontend",
+    "lint:fix": "npm run lint:fix --workspace=frontend",
+    "test": "npm run test --workspace=frontend"
   }
 }

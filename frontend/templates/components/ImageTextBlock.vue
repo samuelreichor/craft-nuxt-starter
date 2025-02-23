@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {ImageObject} from "~/components/Image/image-types";
+import type { ImageObject } from '~/components/Image/image-types'
 
 const props = defineProps({
   image: {
@@ -18,5 +18,10 @@ const props = defineProps({
 </script>
 
 <template>
-  <ImageText :image="image[0] as ImageObject" :title="props.headline" :introText="props.richText"/>
+  <ImageText
+    :image="image[0]"
+    :title="props.headline"
+    :intro-text="props.richText"
+    class="mt-16"
+  />
 </template>
