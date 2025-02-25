@@ -1,0 +1,96 @@
+color: null
+fieldLayouts:
+  7a857a88-d62b-45e3-b8ea-7ce435881947:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-02-25T17:42:27+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6e568b59-ad89-4df9-8886-98a3261f6f6c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-25T17:46:04+00:00'
+            elementCondition: null
+            heading: Hero
+            type: craft\fieldlayoutelements\Heading
+            uid: 17534e95-a1a9-49b6-8fe4-83fc17f3d2f8
+            userCondition: null
+          -
+            dateAdded: '2025-02-25T17:46:04+00:00'
+            elementCondition: null
+            fieldUid: 5152ea47-9757-4b5b-ac90-92e1beb848e8 # Single News Entry
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6c5a8ed6-3fca-482b-8ab7-04a89e9b62af
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-25T17:46:04+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 1c5f519a-3d96-4712-bc83-6de27e5d4089
+            userCondition: null
+          -
+            dateAdded: '2025-02-25T17:46:04+00:00'
+            elementCondition: null
+            fieldUid: 613e3fb4-ca6e-40cb-81f9-dfb72e3f0484 # Headline
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4a7196db-0c1b-43f8-8a08-45da75da6c7d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 82ab1a6a-66a1-4504-9c9b-4d945c21b974
+        userCondition: null
+handle: entry_newsOverview
+hasTitleField: true
+icon: null
+name: 'Entry: News Overview'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
