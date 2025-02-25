@@ -4,6 +4,7 @@ import type { Config } from 'vue-craftcms'
 // Pages
 import Home from '~/templates/pages/home.vue'
 import News from '~/templates/pages/news.vue'
+import NewsOverview from '~/templates/pages/newsOverview.vue'
 
 // Components
 import ImageText from '~/templates/components/ImageTextBlock.vue'
@@ -16,6 +17,7 @@ const mapping: Config = {
   pages: {
     'home:entry_default': Home,
     'news:entry_news': News,
+    'newsOverview:entry_newsOverview': NewsOverview,
   },
   components: {
     block_imageText: ImageText,

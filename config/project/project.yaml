@@ -1,4 +1,4 @@
-dateModified: 1740504883
+dateModified: 1740505566
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -31,10 +31,13 @@ meta:
     613e3fb4-ca6e-40cb-81f9-dfb72e3f0484: Headline # Headline
     677c0116-c363-4e74-b5ab-87aaeaaf261d: 'Content Builder' # Content Builder
     03765a14-8035-4d3a-bada-9ec41b6f99e5: Image # Image
+    5152ea47-9757-4b5b-ac90-92e1beb848e8: 'Single News Entry' # Single News Entry
     27541a86-a923-489e-a772-e7081c0ec88a: 'Entry: Default' # Entry: Default
     4080139d-238b-4990-9747-dc47d0e284e8: 'Select News' # Select News
     b0d48687-1e44-4d17-a816-07ef88cf30de: 'Block: Headline' # Block: Headline
     b667ce1c-4e81-4f47-be8f-f9117f42fd21: ES # ES
+    d0db7657-a129-40bd-b00d-7710cf9f3dc3: 'News Overview' # News Overview
+    e64eddb0-9d09-4592-a721-e22c9a10c8db: 'Entry: News Overview' # Entry: News Overview
     f58e1976-da02-4678-93be-a8def53fbc4e: 'Select Users' # Select Users
     f65c8ce7-d94d-40d3-b234-a7504ef26035: 'SEO Settings' # SEO Settings
     f646c08b-ca3c-41dd-9be9-f173a6175f5e: 'Block: Related News' # Block: Related News
