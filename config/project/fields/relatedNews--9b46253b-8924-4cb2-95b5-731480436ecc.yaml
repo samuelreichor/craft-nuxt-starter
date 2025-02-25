@@ -11,7 +11,7 @@ settings:
       __assoc__:
         -
           - uid
-          - f646c08b-ca3c-41dd-9be9-f173a6175f5e # Block: Cta
+          - f646c08b-ca3c-41dd-9be9-f173a6175f5e # Block: Related News
   includeTableView: false
   maxEntries: 1
   minEntries: null

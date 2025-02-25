@@ -3,7 +3,7 @@ import type { ImageObject } from '~/components/Image/image-types'
 
 const props = defineProps({
   image: {
-    type: Array as PropType<ImageObject[]>,
+    type: Object as PropType<ImageObject>,
     required: true,
   },
   headline: {
@@ -19,7 +19,7 @@ const props = defineProps({
 
 <template>
   <ImageText
-    :image="image[0]"
+    :image="image"
     :title="props.headline"
     :intro-text="props.richText"
     class="mt-16"

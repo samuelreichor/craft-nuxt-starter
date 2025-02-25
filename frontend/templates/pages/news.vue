@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import type { PropType } from 'vue'
 import type { NewsEntry } from '~/components/RelatedNews/news-type'
 import type { DefaultEntry } from '~/types/craftcms'
+import type { ImageObject } from '~/components/Image/image-types'
 
 const props = defineProps({
   metadata: {
@@ -28,7 +30,7 @@ const props = defineProps({
     required: true,
   },
   image: {
-    type: Object,
+    type: Object as PropType<ImageObject>,
     default: () => undefined,
   },
 })
@@ -54,7 +56,7 @@ if (error.value) {
       v-if="props.image && props.headline"
       :title="props.headline"
       :intro-text="props.richText"
-      :image="props.image[0]"
+      :image="props.image"
       headline-size="h1"
     />
     <CraftArea

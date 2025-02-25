@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a42032bcb2701db4f0853b4aeefb0572",
+    "content-hash": "1f5a37c1f5a8ccebaa4f75c094682e18",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -3900,16 +3900,16 @@
         },
         {
             "name": "samuelreichor/craft-query-api",
-            "version": "1.1.4",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/samuelreichor/craft-query-api.git",
-                "reference": "b615cc4442517e7449baf6c95ff4bbe05cb359ff"
+                "reference": "c64e9873fb856ed5d254b4c4dd82c6ad36d88ecc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samuelreichor/craft-query-api/zipball/b615cc4442517e7449baf6c95ff4bbe05cb359ff",
-                "reference": "b615cc4442517e7449baf6c95ff4bbe05cb359ff",
+                "url": "https://api.github.com/repos/samuelreichor/craft-query-api/zipball/c64e9873fb856ed5d254b4c4dd82c6ad36d88ecc",
+                "reference": "c64e9873fb856ed5d254b4c4dd82c6ad36d88ecc",
                 "shasum": ""
             },
             "require": {
@@ -3943,7 +3943,7 @@
                 "issues": "https://github.com/samuelreichor/craft-query-api/issues?state=open",
                 "source": "https://github.com/samuelreichor/craft-query-api"
             },
-            "time": "2025-01-09T16:49:56+00:00"
+            "time": "2025-02-25T17:09:00+00:00"
         },
         {
             "name": "samuelreichor/craft-quick-edit",
@@ -7585,11 +7585,11 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.2"
     },

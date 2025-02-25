@@ -10,7 +10,6 @@ import ImageText from '~/templates/components/ImageTextBlock.vue'
 import RichText from '~/templates/components/RichTextBlock.vue'
 import Headline from '~/templates/components/HeadlineBlock.vue'
 import Authors from '~/templates/components/AuthorsBlock.vue'
-import RelatedNews from '~/templates/components/RelatedNewsBlock.vue'
 
 // Map your Craft CMS data to your vue components and pages
 const mapping: Config = {
@@ -23,7 +22,6 @@ const mapping: Config = {
     block_richText: RichText,
     block_author: Authors,
     block_headline: Headline,
-    block_cta: RelatedNews,
   },
 }
 
