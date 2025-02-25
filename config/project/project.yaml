@@ -1,4 +1,4 @@
-dateModified: 1740338385
+dateModified: 1740504883
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -37,7 +37,7 @@ meta:
     b667ce1c-4e81-4f47-be8f-f9117f42fd21: ES # ES
     f58e1976-da02-4678-93be-a8def53fbc4e: 'Select Users' # Select Users
     f65c8ce7-d94d-40d3-b234-a7504ef26035: 'SEO Settings' # SEO Settings
-    f646c08b-ca3c-41dd-9be9-f173a6175f5e: 'Block: Cta' # Block: Cta
+    f646c08b-ca3c-41dd-9be9-f173a6175f5e: 'Block: Related News' # Block: Related News
 plugins:
   ckeditor:
     edition: standard

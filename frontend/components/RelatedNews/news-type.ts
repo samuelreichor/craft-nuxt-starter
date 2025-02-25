@@ -3,7 +3,7 @@ import type { ImageObject } from '~/components/Image/image-types'
 
 export type NewsEntry = {
   metadata: MetadataEntry
-  image: ImageObject[]
+  image: ImageObject
   richText: string
   headline: string
 }

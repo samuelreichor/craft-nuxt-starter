@@ -12,7 +12,7 @@ settings:
   defaultUploadLocationSource: 'volume:31f620da-7617-49ed-be03-9ff85694c893' # Images
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: null
+  maxRelations: 1
   minRelations: null
   previewMode: full
   restrictFiles: false

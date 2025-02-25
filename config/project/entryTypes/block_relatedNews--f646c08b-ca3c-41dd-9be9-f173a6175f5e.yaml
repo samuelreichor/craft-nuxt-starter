@@ -54,10 +54,10 @@ fieldLayouts:
         name: Content
         uid: 47c6e5d9-d36c-48c8-a632-4b23497c8912
         userCondition: null
-handle: block_cta
+handle: block_relatedNews
 hasTitleField: true
 icon: null
-name: 'Block: Cta'
+name: 'Block: Related News'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

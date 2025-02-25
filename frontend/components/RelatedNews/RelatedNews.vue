@@ -24,7 +24,7 @@ const props = defineProps({
         :key="newsEntry.metadata.id"
       >
         <RelatedNewsCard
-          :image="newsEntry.image[0]"
+          :image="newsEntry.image"
           :rich-text="newsEntry.richText"
           :headline="newsEntry.headline"
           :url="newsEntry.metadata.url"
