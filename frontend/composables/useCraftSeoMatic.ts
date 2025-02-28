@@ -11,12 +11,14 @@ type SeoData = {
 
 export async function useCraftSeoMatic(uri?: string | Ref<string>, site?: CraftSite | Ref<CraftSite>) {
   const { baseUrl, siteMap } = useRuntimeConfig().public.craftcms
+
   if (siteMap.length === 0) {
     throw createError({
       statusCode: 500,
       statusMessage: 'Please ensure that a valid sitemap is defined in your app.config.ts file.',
     })
   }
+
   const currentSite = site ? ref(site) : useCraftCurrentSite()
   const currentUri = uri ? ref(uri) : useCraftUri()
 
@@ -83,19 +85,21 @@ export async function useCraftSeoMatic(uri?: string | Ref<string>, site?: CraftS
 
     const jsonLd = data.value.MetaJsonLdContainer || {}
 
-    useHead({
-      htmlAttrs: {
-        lang: currentSite.value.lang ?? 'en',
-      },
-      title,
-      meta: metaTags,
-      link: linkTags,
-      script: [
-        {
-          type: 'application/ld+json',
-          innerHTML: JSON.stringify(jsonLd),
+    nextTick(() => {
+      useHead({
+        htmlAttrs: {
+          lang: currentSite.value.lang ?? 'en',
         },
-      ],
+        title,
+        meta: metaTags,
+        link: linkTags,
+        script: [
+          {
+            type: 'application/ld+json',
+            innerHTML: JSON.stringify(jsonLd),
+          },
+        ],
+      })
     })
   })
 }
