@@ -1,6 +1,16 @@
 # Starter Template for Nuxt x Craft CMS
 
-Trust me it's easy!
+This starter is built using the [Craft Query API](https://samuelreichor.at/libraries/craft-query-api).  
+You don’t need any knowledge of GraphQL—just familiarity with Craft CMS’s query builder is enough to get started.
+
+## Features
+
+✅ No GraphQl <br>
+✅ Optimized images with ImagerX <br>
+✅ World-class SEO with SeoMatic <br>
+✅ Multilingual with Craft multisites <br>
+✅ Fully runs on ddev <br>
+✅ Tailwind v4, Nuxt v3, Eslint, Typescript, Craft v5 
 
 ## Requirements
 
@@ -25,9 +35,13 @@ Use these credentials to access the control panel:
 - `ddev fe <command>`: cd's in the frontend folder and runs the provided command.
 - `ddev npm run <command>` runs the commands in the frontend folder due to npm workspaces.
 
+**Note:** This template utilizes npm workspaces, which is why there are two package.json files. 
+This setup allows you to run npm commands at the root level while managing multiple packages 
+within the workspace efficiently. (`ddev npm run dev` does the same as `ddev fe npm run dev`)
+
 ## Further Resources
 
-- [Craft Query API](https://github.com/samuelreichor/craft-query-api): The Craft CMS Plugin, that powers this great stuff.
+- [Craft Query API](https://samuelreichor.at/libraries/craft-query-api): The Craft CMS Plugin, that powers this great stuff.
 - [Nuxt Craft CMS](https://samuelreichor.at/libraries/nuxt-craftcms): The package used to get the query builder in Nuxt.
 - [JS Craft CMS API](https://samuelreichor.at/libraries/js-craftcms-api): `nuxt-craftcms` is built on the `js-craftcms-api`.
 
