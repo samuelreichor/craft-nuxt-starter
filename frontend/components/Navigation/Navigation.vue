@@ -1,18 +1,40 @@
 <script setup lang="ts">
-const links = [
-  {
-    url: '/',
-    title: 'Home',
-  },
-  {
-    url: '/news/fat-cat',
-    title: 'Fat Cat',
-  },
-]
+type Node = {
+  metadata: NodeMetadata
+  title: string
+  url: string
+  uri: string
+  type: string
+  level: number
+}
 
-function isActive(url: string) {
-  const uri = useCraftUri()
-  return '/' + uri.value === url || (uri.value === '__home__' && url === '/')
+type NodeMetadata = {
+  id: number
+  siteId: number
+}
+
+const currentSite = useCraftCurrentSite()
+const { baseUrl } = useRuntimeConfig().public.craftcms
+const apiUrl = computed(() => `${baseUrl}/v1/api/queryApi/customQuery?elementType=navigation&handle=mainNavigation&siteId=${currentSite.value.id}&all=1`)
+
+const { data: links, error } = useFetch(apiUrl, {
+  transform: (links: Node[]) => {
+    return links.map(link => ({
+      title: link.title,
+      uri: getFullUri(link.url),
+      url: link.url,
+    }))
+  },
+})
+
+if (error.value) {
+  console.log(error.value)
+}
+
+const { origin } = useRequestURL()
+function getFullUri(url: string) {
+  const fullUri = normalizeUrl(url).replace(normalizeUrl(origin), '')
+  return fullUri !== '' ? fullUri : '/'
 }
 </script>
 
@@ -27,8 +49,7 @@ function isActive(url: string) {
         :key="link.url"
       >
         <NuxtLink
-          :class="{ 'font-bold': isActive(link.url) }"
-          :href="link.url"
+          :href="link.uri"
         >
           {{ link.title }}
         </NuxtLink>
@@ -39,3 +60,9 @@ function isActive(url: string) {
     </div>
   </div>
 </template>
+
+<style scoped>
+  .router-link-active {
+    font-weight: bold;
+  }
+</style>

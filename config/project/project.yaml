@@ -1,4 +1,4 @@
-dateModified: 1740505566
+dateModified: 1740749727
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -25,6 +25,7 @@ meta:
     34d5e048-0128-4fc4-abf3-0414145729f2: 'Block: Image Text' # Block: Image Text
     49e9100f-d9e4-4289-88ec-d8711b06ef1a: 'Headline Tag' # Headline Tag
     56ac54ae-5bb8-4d51-9e2a-940afa549231: Simple # Simple
+    67f337ce-7f25-49a1-ae63-41369285d1e0: 'Main Navigation' # Main Navigation
     69ae9356-f1fd-4bbc-8239-816ba3795819: DE # DE
     88cdb492-76a1-4a67-902f-08ffc4de6ab8: 'Craft Nuxt' # Craft Nuxt
     94a69073-ffd1-4bc0-a6fb-703072ae99fa: 'Block: Author' # Block: Author
@@ -53,12 +54,28 @@ plugins:
   imager-x:
     edition: pro
     enabled: true
-    licenseKey: GSUXATRK5JR3GXJNBF0L9D7P
+    licenseKey: $PLUGIN_IMAGERX
     schemaVersion: 4.0.0
   matrix-extended:
     edition: standard
     enabled: true
     schemaVersion: 3.1.0
+    settings:
+      enableAddBlockAbove: true
+      enableCopyPaste: true
+      enableDragDrop: true
+      enableDuplicate: true
+      expandMenu: true
+      expandUngrouped: false
+      experimentalFeatures: true
+      extraDeleteButton: true
+      removeEntryTypesFromDiscloseMenu: true
+      ungroupedPosition: start
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: $PLUGIN_NAVIGATION
+    schemaVersion: 2.1.0
   quick-edit:
     edition: standard
     enabled: true
@@ -66,7 +83,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: J53980N1UAG12R3AEBOF1B16
+    licenseKey: $PLUGIN_SEOMATIC
     schemaVersion: 3.0.12
     settings:
       addHrefLang: true
