@@ -46,9 +46,15 @@ provide('entry', data)
 </script>
 
 <template>
-  <CraftPage
-    v-if="data"
-    :config="mapping"
-    :content="data"
-  />
+  <NuxtLayout>
+    <template #navigation>
+      <Navigation />
+    </template>
+    <CraftPage
+      v-if="data"
+      :config="mapping"
+      :content="data"
+    />
+    <template #footer />
+  </NuxtLayout>
 </template>

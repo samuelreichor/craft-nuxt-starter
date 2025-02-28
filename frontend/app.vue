@@ -4,11 +4,5 @@ useCraftSeoMatic()
 </script>
 
 <template>
-  <NuxtLayout>
-    <template #navigation>
-      <Navigation />
-    </template>
-    <NuxtPage />
-    <template #footer />
-  </NuxtLayout>
+  <NuxtPage />
 </template>
