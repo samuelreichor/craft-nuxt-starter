@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { EntryRelation } from '~/types/craftcms'
 import type { NewsEntry } from '~/components/RelatedNews/news-type'
+import type { ImageObject } from '~/components/Image/image-types'
 
 export type BlockRelatedNews = {
   title: string
@@ -32,7 +33,7 @@ const props = defineProps({
     required: true,
   },
   image: {
-    type: Object,
+    type: Object as PropType<ImageObject>,
     default: () => undefined,
   },
   relatedNews: {
