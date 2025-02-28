@@ -37,14 +37,13 @@ await useCraftEntry()
   .fields(['headline', 'richText', 'image'])
   .all()
   .then(({ data, error }) => {
+    if (error.value) {
+      console.error((error.value))
+    }
     if (data.value && props.singleNewsEntry) {
       const { heroArticle, newsArticles } = splitNewsEntriesById(data.value as NewsEntry[], props.singleNewsEntry.id)
       heroNewsEntry.value = heroArticle
       newsEntries.value = newsArticles
-    }
-
-    if (error.value) {
-      console.error((error.value))
     }
   })
 
