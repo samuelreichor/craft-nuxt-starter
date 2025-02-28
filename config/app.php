@@ -21,7 +21,8 @@
  */
 
 use craft\helpers\App;
+use modules\queryapiextensions\QueryApiExtensions;
 
 return [
-    'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
+    'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS', 'modules' => ['query-api-extensions' => QueryApiExtensions::class], 'bootstrap' => ['query-api-extensions'],
 ];

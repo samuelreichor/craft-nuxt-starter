@@ -1,0 +1,206 @@
+defaultPlacement: end
+fieldLayouts:
+  83153afb-d133-4442-ae51-33108aa4b3fe:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-02-25T19:05:46+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 9a97f36c-d715-4f72-863f-6af3f3a238ce
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-25T19:05:46+00:00'
+            elementCondition: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: verbb\navigation\fieldlayoutelements\NodeTypeElements
+            uid: 4aa53892-aa8c-4c46-8f4c-da354b26462b
+            userCondition: null
+            warning: null
+          -
+            attribute: newWindow
+            dateAdded: '2025-02-25T19:05:46+00:00'
+            elementCondition: null
+            id: null
+            includeInCards: false
+            instructions: null
+            label: null
+            mandatory: false
+            orientation: null
+            providesThumbs: false
+            requirable: true
+            required: false
+            tip: null
+            translatable: false
+            type: verbb\navigation\fieldlayoutelements\NewWindowField
+            uid: d90760b9-6ada-4fcf-a754-b0de0987b665
+            userCondition: null
+            warning: null
+            width: 100
+        name: Node
+        uid: 50023ed9-b89e-4d9e-a084-954aba9d89ac
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            attribute: urlSuffix
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            dateAdded: '2025-02-25T19:05:46+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            mandatory: false
+            max: null
+            maxlength: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: true
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            translatable: false
+            type: verbb\navigation\fieldlayoutelements\UrlSuffixField
+            uid: 476faaf2-0690-4072-9a43-ce7ceb98c609
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: classes
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            dateAdded: '2025-02-25T19:05:46+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            mandatory: false
+            max: null
+            maxlength: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: true
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            translatable: false
+            type: verbb\navigation\fieldlayoutelements\ClassesField
+            uid: d46af45e-f7d4-4022-8054-b6fbee4a54cc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: customAttributes
+            dateAdded: '2025-02-25T19:05:46+00:00'
+            elementCondition: null
+            id: null
+            includeInCards: false
+            instructions: null
+            label: null
+            mandatory: false
+            orientation: null
+            providesThumbs: false
+            requirable: true
+            required: false
+            tip: null
+            translatable: false
+            type: verbb\navigation\fieldlayoutelements\CustomAttributesField
+            uid: eed1e024-978d-45c6-9e87-504d184b32e9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Advanced
+        uid: 7b029e90-39d1-4432-b79c-7a6b9f3dde41
+        userCondition: null
+handle: mainNavigation
+instructions: ''
+maxNodes: null
+name: 'Main Navigation'
+permissions:
+  craft\elements\Asset:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Category:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Tag:
+    enabled: ''
+    permissions: '*'
+  verbb\navigation\nodetypes\CustomType:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+  verbb\navigation\nodetypes\SiteType:
+    enabled: '1'
+propagationMethod: all
+siteSettings:
+  17b8e90a-bb07-4ebb-b17a-e9897728cdc8: # EN
+    enabled: true
+  69ae9356-f1fd-4bbc-8239-816ba3795819: # DE
+    enabled: true
+  b667ce1c-4e81-4f47-be8f-f9117f42fd21: # ES
+    enabled: true
+sortOrder: 1
+structure:
+  maxLevels: 1
+  uid: cd3fd676-48fe-4c0f-a5b5-724d0b7032b7
