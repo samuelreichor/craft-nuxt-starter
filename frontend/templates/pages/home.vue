@@ -13,7 +13,7 @@ const props = defineProps({
     required: true,
   },
   contentBuilder: {
-    type: Object,
+    type: Array,
     required: true,
   },
   sectionHandle: {
