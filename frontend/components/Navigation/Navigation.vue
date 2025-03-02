@@ -31,9 +31,8 @@ if (error.value) {
   console.log(error.value)
 }
 
-const { origin } = useRequestURL()
 function getFullUri(url: string) {
-  const fullUri = normalizeUrl(url).replace(normalizeUrl(origin), '')
+  const fullUri = normalizeUrl(url).replace(normalizeUrl(baseUrl), '')
   return fullUri !== '' ? fullUri : '/'
 }
 </script>
@@ -49,7 +48,7 @@ function getFullUri(url: string) {
         :key="link.url"
       >
         <NuxtLink
-          :href="link.uri"
+          :to="link.uri"
         >
           {{ link.title }}
         </NuxtLink>
