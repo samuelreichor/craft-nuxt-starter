@@ -17,7 +17,6 @@ return [
         'cacheDurationExternalStorage' => 31536000, // 1 year
 
         'fallbackImage' => getenv('FALLBACK_IMAGE') ?: null,
-        'mockImage' => getenv('MOCK_IMAGE') ?: null,
 
         'imagerSystemPath' => '@webroot/assets/imager/',
         'imagerUrl' => '@web/assets/imager/',
