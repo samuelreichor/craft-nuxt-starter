@@ -37,7 +37,7 @@ const props = defineProps({
 
 const currentEntry = inject<Ref<DefaultEntry>>('entry')
 const currentEntryId = computed(() => currentEntry?.value.metadata.id)
-const { data: news, error } = useCraftEntry()
+const { data: news, error } = await useCraftEntry()
   .section('news')
   .id(['not', currentEntryId.value ?? 0])
   .limit(3)

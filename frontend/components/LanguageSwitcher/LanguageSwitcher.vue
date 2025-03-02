@@ -3,7 +3,7 @@ import type { CraftSites } from 'vue-craftcms'
 import type { DefaultEntry } from '~/types/craftcms'
 
 // Get global defined sitemap
-const { siteMap } = useRuntimeConfig().public.craftcms
+const { siteMap, baseUrl } = useRuntimeConfig().public.craftcms
 const typedSiteMap = siteMap as CraftSites
 
 // Get current entry id
@@ -16,7 +16,6 @@ if (currentEntry) {
 // Query entries on other sites based on site id and entry id
 const activeSites = ref()
 const siteIdArr = typedSiteMap.map(site => site.id) as number[]
-const { origin } = useRequestURL()
 await useCraftEntry().siteId(siteIdArr).id(id.value).fields('metadata').all().then(({ data, error }) => {
   if (error.value) {
     console.error((error.value))
@@ -32,7 +31,7 @@ await useCraftEntry().siteId(siteIdArr).id(id.value).fields('metadata').all().th
 })
 
 function getFullUri(url: string) {
-  const fullUri = normalizeUrl(url).replace(normalizeUrl(origin), '')
+  const fullUri = normalizeUrl(url).replace(normalizeUrl(baseUrl), '')
   return fullUri !== '' ? fullUri : '/'
 }
 

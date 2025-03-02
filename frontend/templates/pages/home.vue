@@ -47,7 +47,7 @@ if (props.relatedNews && props.relatedNews.selectNews.length > 0) {
   ids.value = props.relatedNews.selectNews.map(news => news.id)
 }
 const currentSite = useCraftCurrentSite()
-const { data: news, error: newsError } = useCraftQuery('entries')
+const { data: news, error: newsError } = await useCraftQuery('entries')
   .id(ids.value)
   .siteId(currentSite.value.id)
   .fields(['headline', 'image', 'richText'])

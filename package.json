@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "build": "npm run build --workspace=frontend",
+    "generate": "npm run generate --workspace=frontend",
     "dev": "npm run dev --workspace=frontend",
     "preview": "npm run preview --workspace=frontend",
     "typecheck": "npm run typecheck --workspace=frontend",
