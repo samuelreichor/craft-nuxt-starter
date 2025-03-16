@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb34275a51f631ded86c41feff28d5ea",
+    "content-hash": "51190c5f30f1bde011e53f3f5cf35362",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -3900,16 +3900,16 @@
         },
         {
             "name": "samuelreichor/craft-query-api",
-            "version": "2.0.0",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/samuelreichor/craft-query-api.git",
-                "reference": "c64e9873fb856ed5d254b4c4dd82c6ad36d88ecc"
+                "reference": "b95a7e0ed3abd4e68be5e4474c35ce0f4afc4467"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samuelreichor/craft-query-api/zipball/c64e9873fb856ed5d254b4c4dd82c6ad36d88ecc",
-                "reference": "c64e9873fb856ed5d254b4c4dd82c6ad36d88ecc",
+                "url": "https://api.github.com/repos/samuelreichor/craft-query-api/zipball/b95a7e0ed3abd4e68be5e4474c35ce0f4afc4467",
+                "reference": "b95a7e0ed3abd4e68be5e4474c35ce0f4afc4467",
                 "shasum": ""
             },
             "require": {
@@ -3922,11 +3922,11 @@
             },
             "type": "craft-plugin",
             "extra": {
-                "name": "Craft Query API",
+                "name": "Query API",
                 "class": "samuelreichoer\\queryapi\\QueryApi",
                 "handle": "craft-query-api",
                 "developer": "Samuel Reichoer",
-                "documentationUrl": "https://github.com/samuelreichor/craft-query-api"
+                "documentationUrl": "https://samuelreichor.at/libraries/craft-query-api"
             },
             "autoload": {
                 "psr-4": {
@@ -3935,28 +3935,28 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
-            "description": "Speeds up development in headless mode with custom fetch queries",
+            "description": "Speeds up development in headless mode with an API that allows querying data using URL parameters.",
             "support": {
                 "email": "samuelreichor@gmail.com",
                 "issues": "https://github.com/samuelreichor/craft-query-api/issues?state=open",
                 "source": "https://github.com/samuelreichor/craft-query-api"
             },
-            "time": "2025-02-25T17:09:00+00:00"
+            "time": "2025-03-16T11:56:20+00:00"
         },
         {
             "name": "samuelreichor/craft-quick-edit",
-            "version": "5.0.2",
+            "version": "5.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samuelreichor/craft-quick-edit/zipball/05868cb45f93757e2b5e53d07667b632156bb1be",
-                "reference": "05868cb45f93757e2b5e53d07667b632156bb1be",
+                "url": "https://api.github.com/repos/samuelreichor/craft-quick-edit/zipball/ffbe77dc95e28307a53189bb526546ee5d6ada7c",
+                "reference": "ffbe77dc95e28307a53189bb526546ee5d6ada7c",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0",
-                "php": ">=8.2"
+                "craftcms/cms": "^4.0|^5.0",
+                "php": ">=8.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -3995,7 +3995,7 @@
                 "docs": "https://github.com/samuelreichor/craft-quick-edit",
                 "rss": "https://github.com/samuelreichor/craft-quick-edit/releases.atom"
             },
-            "time": "2025-01-26T19:19:35+00:00"
+            "time": "2025-03-15T16:17:06+00:00"
         },
         {
             "name": "seld/cli-prompt",

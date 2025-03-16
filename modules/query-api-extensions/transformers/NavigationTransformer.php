@@ -2,6 +2,7 @@
 
 namespace modules\queryapiextensions\transformers; // Change this to your namespace
 
+use samuelreichoer\queryapi\helpers\Utils;
 use samuelreichoer\queryapi\transformers\BaseTransformer;
 use verbb\navigation\elements\Node;
 
@@ -28,6 +29,7 @@ class NavigationTransformer extends BaseTransformer
             'title' => $this->navigation->title,
             'url' => $this->navigation->getUrl(),
             'uri' => $this->navigation->getNodeUri(),
+            'fullUri' => Utils::getFullUriFromUrl($this->navigation->getUrl()),
             'type' => $this->navigation->getTypeLabel(),
             'level' => $this->navigation->level,
         ];

@@ -17,6 +17,7 @@ export type MetadataEntry = {
   status: EntryStatusString
   uri: string
   url: string
+  fullUri: string
 }
 
 export type DefaultEntry = {

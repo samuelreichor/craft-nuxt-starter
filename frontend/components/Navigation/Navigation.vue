@@ -4,6 +4,7 @@ type Node = {
   title: string
   url: string
   uri: string
+  fullUri: string
   type: string
   level: number
 }
@@ -21,7 +22,7 @@ const { data: links, error } = useFetch(apiUrl, {
   transform: (links: Node[]) => {
     return links.map(link => ({
       title: link.title,
-      uri: getFullUri(link.url),
+      uri: link.fullUri,
       url: link.url,
     }))
   },
@@ -29,11 +30,6 @@ const { data: links, error } = useFetch(apiUrl, {
 
 if (error.value) {
   console.log(error.value)
-}
-
-function getFullUri(url: string) {
-  const fullUri = normalizeUrl(url).replace(normalizeUrl(baseUrl), '')
-  return fullUri !== '' ? fullUri : '/'
 }
 </script>
 
