@@ -27,7 +27,7 @@ const props = defineProps({
           :image="newsEntry.image"
           :rich-text="newsEntry.richText"
           :headline="newsEntry.headline"
-          :url="newsEntry.metadata.url"
+          :url="newsEntry.metadata.fullUri"
         />
       </li>
     </ul>

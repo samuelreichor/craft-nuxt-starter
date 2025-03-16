@@ -3,7 +3,7 @@ import type { CraftSites } from 'vue-craftcms'
 import type { DefaultEntry } from '~/types/craftcms'
 
 // Get global defined sitemap
-const { siteMap, baseUrl } = useRuntimeConfig().public.craftcms
+const { siteMap } = useRuntimeConfig().public.craftcms
 const typedSiteMap = siteMap as CraftSites
 
 // Get current entry id
@@ -23,17 +23,12 @@ await useCraftEntry().siteId(siteIdArr).id(id.value).fields('metadata').all().th
   if (data.value) {
     const typedRespData = data.value as DefaultEntry[]
     activeSites.value = typedRespData.map((entry: DefaultEntry) => ({
-      uri: getFullUri(entry.metadata.url),
+      uri: entry.metadata.fullUri,
       url: entry.metadata.url,
       label: getSiteLabelById(entry.metadata.siteId),
     }))
   }
 })
-
-function getFullUri(url: string) {
-  const fullUri = normalizeUrl(url).replace(normalizeUrl(baseUrl), '')
-  return fullUri !== '' ? fullUri : '/'
-}
 
 function getSiteLabelById(id: number) {
   const site = typedSiteMap.find(site => site.id === id)
