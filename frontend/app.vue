@@ -1,6 +1,7 @@
 <script setup lang="ts">
-// Fetch & apply seomatic properties
-useCraftSeoMatic()
+import { useSeoMatic } from '~/composables/useSeoMatic'
+
+useSeoMatic()
 </script>
 
 <template>
