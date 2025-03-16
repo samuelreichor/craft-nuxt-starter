@@ -83,6 +83,28 @@ fieldLayouts:
         name: Content
         uid: 82ab1a6a-66a1-4504-9c9b-4d945c21b974
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-03-16T12:05:21+00:00'
+            elementCondition: null
+            fieldUid: f65c8ce7-d94d-40d3-b234-a7504ef26035 # SEO Settings
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 918cfc88-a929-4f85-8f80-291f23af7b81
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'SEO Settings'
+        uid: c9d6db01-26fb-4bfb-893d-18f951dac7c1
+        userCondition: null
 handle: entry_newsOverview
 hasTitleField: true
 icon: null
