@@ -16,6 +16,7 @@ return GeneralConfig::create()
     ->preloadSingles()
     ->preventUserEnumeration()
     ->headlessMode(true)
+    ->generateTransformsBeforePageLoad(true)
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
     ])
