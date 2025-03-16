@@ -35,12 +35,16 @@ const props = defineProps({
   },
 })
 
+const currentSite = useCraftCurrentSite()
 const currentEntry = inject<Ref<DefaultEntry>>('entry')
 const currentEntryId = computed(() => currentEntry?.value.metadata.id)
+const currentSiteId = computed(() => currentSite.value.id)
+
 const { data: news, error } = await useCraftEntry()
   .section('news')
   .id(['not', currentEntryId.value ?? 0])
   .limit(3)
+  .siteId(currentSiteId.value)
   .orderBy('PostDate')
   .fields(['headline', 'richText', 'image'])
   .all()
