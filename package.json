@@ -18,5 +18,8 @@
     "lint": "npm run lint --workspace=frontend",
     "lint:fix": "npm run lint:fix --workspace=frontend",
     "test": "npm run test --workspace=frontend"
+  },
+  "dependencies": {
+    "@rollup/rollup-linux-arm64-gnu": "^4.38.0"
   }
 }

@@ -5,7 +5,7 @@
     "craftcms/ckeditor": "4.6.0",
     "craftcms/cms": "5.6.11",
     "nystudio107/craft-seomatic": "5.1.11",
-    "samuelreichor/craft-query-api": "2.0.2",
+    "samuelreichor/craft-query-api": "dev-dev",
     "samuelreichor/craft-quick-edit": "5.1.0",
     "spacecatninja/imager-x": "5.1.2",
     "vandres/craft-matrix-extended": "v4.2.1",
