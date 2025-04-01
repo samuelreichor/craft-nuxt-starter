@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "09776397ab9fe8b0e2fc88781d42781e",
+    "content-hash": "f2fdb1f9f0730dfa699fdcf993705c46",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -3976,16 +3976,16 @@
         },
         {
             "name": "samuelreichor/craft-query-api",
-            "version": "2.0.2",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/samuelreichor/craft-query-api.git",
-                "reference": "b95a7e0ed3abd4e68be5e4474c35ce0f4afc4467"
+                "reference": "904bbd6997c39fcbee4cb0ad39ddd6567066a8f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samuelreichor/craft-query-api/zipball/b95a7e0ed3abd4e68be5e4474c35ce0f4afc4467",
-                "reference": "b95a7e0ed3abd4e68be5e4474c35ce0f4afc4467",
+                "url": "https://api.github.com/repos/samuelreichor/craft-query-api/zipball/904bbd6997c39fcbee4cb0ad39ddd6567066a8f5",
+                "reference": "904bbd6997c39fcbee4cb0ad39ddd6567066a8f5",
                 "shasum": ""
             },
             "require": {
@@ -4000,7 +4000,7 @@
             "extra": {
                 "name": "Query API",
                 "class": "samuelreichoer\\queryapi\\QueryApi",
-                "handle": "craft-query-api",
+                "handle": "query-api",
                 "developer": "Samuel Reichoer",
                 "documentationUrl": "https://samuelreichor.at/libraries/craft-query-api"
             },
@@ -4019,7 +4019,7 @@
                 "issues": "https://github.com/samuelreichor/craft-query-api/issues?state=open",
                 "source": "https://github.com/samuelreichor/craft-query-api"
             },
-            "time": "2025-03-16T11:56:20+00:00"
+            "time": "2025-03-25T18:56:32+00:00"
         },
         {
             "name": "samuelreichor/craft-quick-edit",
@@ -7938,11 +7938,13 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "samuelreichor/craft-query-api": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.2"
     },

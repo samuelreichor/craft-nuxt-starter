@@ -1,4 +1,4 @@
-dateModified: 1742126721
+dateModified: 1742930579
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -13,6 +13,7 @@ fs:
     url: /assets/images
 meta:
   __names__:
+    0dbceece-ccd4-46a3-8ab4-50f0d9a82f83: 'Public Schema' # Public Schema
     2ea68146-4f43-4108-a7fe-ac78e82d9d69: 'Block: Rich Text' # Block: Rich Text
     6a9c7573-e73a-4370-8e28-d50007a36721: Entry # Entry
     06dcc65a-0360-492d-885c-8cf26a455f95: 'Rich Text' # Rich Text
@@ -47,10 +48,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
-  craft-query-api:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   imager-x:
     edition: pro
     enabled: true
@@ -76,6 +73,10 @@ plugins:
     enabled: true
     licenseKey: $PLUGIN_NAVIGATION
     schemaVersion: 2.1.0
+  query-api:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   quick-edit:
     edition: standard
     enabled: true

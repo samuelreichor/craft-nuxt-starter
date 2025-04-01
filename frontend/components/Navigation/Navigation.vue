@@ -1,32 +1,15 @@
 <script setup lang="ts">
-type Node = {
-  metadata: NodeMetadata
+type Link = {
   title: string
-  url: string
-  uri: string
   fullUri: string
-  type: string
-  level: number
-}
-
-type NodeMetadata = {
-  id: number
-  siteId: number
+  url: string
 }
 
 const currentSite = useCraftCurrentSite()
 const { baseUrl } = useRuntimeConfig().public.craftcms
 const apiUrl = computed(() => `${baseUrl}/v1/api/queryApi/customQuery?elementType=navigation&handle=mainNavigation&siteId=${currentSite.value.id}&all=1`)
 
-const { data: links, error } = useFetch(apiUrl, {
-  transform: (links: Node[]) => {
-    return links.map(link => ({
-      title: link.title,
-      uri: link.fullUri,
-      url: link.url,
-    }))
-  },
-})
+const { data: links, error } = useCraftFetch<Link[]>(apiUrl)
 
 if (error.value) {
   console.log(error.value)
@@ -44,7 +27,7 @@ if (error.value) {
         :key="link.url"
       >
         <NuxtLink
-          :to="link.uri"
+          :to="link.fullUri"
         >
           {{ link.title }}
         </NuxtLink>

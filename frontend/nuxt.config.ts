@@ -54,6 +54,7 @@ export default defineNuxtConfig({
 
   craftcms: {
     baseUrl: process.env.NUXT_PRIMARY_SITE_URL,
+    authToken: process.env.NUXT_CRAFT_TOKEN,
     debug: false,
     siteMap: [
       {
