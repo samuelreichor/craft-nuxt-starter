@@ -13,3 +13,4 @@ scope:
   - 'volumes.*:read'
   - 'volumes.31f620da-7617-49ed-be03-9ff85694c893:read' # Images
   - 'addresses.*:read'
+  - 'navigation:read'
