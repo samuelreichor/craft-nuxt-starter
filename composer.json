@@ -3,11 +3,11 @@
   "prefer-stable": true,
   "require": {
     "craftcms/ckeditor": "4.6.0",
-    "craftcms/cms": "5.6.11",
-    "nystudio107/craft-seomatic": "5.1.11",
-    "samuelreichor/craft-query-api": "dev-dev#68ad125c",
-    "samuelreichor/craft-quick-edit": "5.1.0",
-    "spacecatninja/imager-x": "5.1.2",
+    "craftcms/cms": "5.7.1.1",
+    "nystudio107/craft-seomatic": "5.1.12",
+    "samuelreichor/craft-query-api": "3.0.0",
+    "samuelreichor/craft-quick-edit": "5.2.0",
+    "spacecatninja/imager-x": "5.1.3",
     "vandres/craft-matrix-extended": "v4.2.1",
     "verbb/navigation": "3.0.6",
     "vlucas/phpdotenv": "5.6.1"

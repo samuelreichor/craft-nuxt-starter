@@ -1,4 +1,4 @@
-dateModified: 1743601820
+dateModified: 1744912186
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -137,5 +137,5 @@ system:
   edition: pro
   live: true
   name: 'Craft Nuxt'
-  schemaVersion: 5.6.0.2
+  schemaVersion: 5.7.0.3
   timeZone: America/Los_Angeles
