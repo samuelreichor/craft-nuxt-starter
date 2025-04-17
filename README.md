@@ -8,9 +8,11 @@ You don’t need any knowledge of GraphQL—just familiarity with Craft CMS’s 
 ✅ No GraphQl <br>
 ✅ Optimized images with ImagerX <br>
 ✅ World-class SEO with SeoMatic <br>
+✅ Navigation Plugin installed and configured <br>
 ✅ Multilingual with Craft multisites <br>
 ✅ Fully runs on ddev <br>
-✅ Tailwind v4, Nuxt v3, Eslint, Typescript, Craft v5 
+✅ Tailwind v4, Nuxt v3, Eslint, Typescript, Craft v5
+✅ Great Cats all over the place
 
 ## Requirements
 
@@ -27,17 +29,24 @@ You don’t need any knowledge of GraphQL—just familiarity with Craft CMS’s 
 This happens because the setup script launches the browser before the dev process is running. 
 
 ### Access the control panel:
+
 Use these credentials to access the control panel:
 - User: admin
 - Password: admin123
 
 ## Scripts
+
 - `ddev fe <command>`: cd's in the frontend folder and runs the provided command.
 - `ddev npm run <command>` runs the commands in the frontend folder due to npm workspaces.
 
 **Note:** This template utilizes npm workspaces, which is why there are two package.json files. 
 This setup allows you to run npm commands at the root level while managing multiple packages 
 within the workspace efficiently. (`ddev npm run dev` does the same as `ddev fe npm run dev`)
+
+## Important Security Notes
+
+If you use this as a starter for your own application be sure to flip the access token! The access token used in that 
+demo project is public available and not save at all.
 
 ## Further Resources
 
