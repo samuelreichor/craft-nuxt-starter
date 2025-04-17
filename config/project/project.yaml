@@ -1,4 +1,4 @@
-dateModified: 1744912186
+dateModified: 1744917022
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -53,21 +53,6 @@ plugins:
     enabled: true
     licenseKey: $PLUGIN_IMAGERX
     schemaVersion: 4.0.0
-  matrix-extended:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.1.0
-    settings:
-      enableAddBlockAbove: true
-      enableCopyPaste: true
-      enableDragDrop: true
-      enableDuplicate: true
-      expandMenu: true
-      expandUngrouped: false
-      experimentalFeatures: true
-      extraDeleteButton: true
-      removeEntryTypesFromDiscloseMenu: true
-      ungroupedPosition: start
   navigation:
     edition: standard
     enabled: true
