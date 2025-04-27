@@ -1,4 +1,4 @@
-dateModified: 1744917022
+dateModified: 1745777988
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -70,7 +70,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: $PLUGIN_SEOMATIC
-    schemaVersion: 3.0.12
+    schemaVersion: 3.0.13
     settings:
       addHrefLang: true
       addPaginatedHreflang: true

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "20d9e7c9eada8122342a2feb8bfaf95a",
+    "content-hash": "00d40ef462a92af3d6cc983d4def5121",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -391,11 +391,11 @@
         },
         {
             "name": "craftcms/ckeditor",
-            "version": "4.6.0",
+            "version": "4.7.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/b838205bb2de62a86863548454bd42ee0b3fd5c9",
-                "reference": "b838205bb2de62a86863548454bd42ee0b3fd5c9",
+                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/ff0f03429d51d8237784e5738d478e5868fc88d9",
+                "reference": "ff0f03429d51d8237784e5738d478e5868fc88d9",
                 "shasum": ""
             },
             "require": {
@@ -439,15 +439,15 @@
                 "docs": "https://github.com/craftcms/ckeditor/blob/master/README.md",
                 "rss": "https://github.com/craftcms/ckeditor/commits/master.atom"
             },
-            "time": "2025-02-18T22:56:36+00:00"
+            "time": "2025-04-21T23:09:09+00:00"
         },
         {
             "name": "craftcms/cms",
-            "version": "5.7.1.1",
+            "version": "5.7.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/819066c0d22909ab2a69b691e8bb7fa1aaddae03",
-                "reference": "819066c0d22909ab2a69b691e8bb7fa1aaddae03",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/0a211b2bd1a834b7e15f16514ed2be494a3aa2f2",
+                "reference": "0a211b2bd1a834b7e15f16514ed2be494a3aa2f2",
                 "shasum": ""
             },
             "require": {
@@ -544,7 +544,7 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2025-04-17T16:31:42+00:00"
+            "time": "2025-04-25T21:06:00+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -2980,11 +2980,11 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "5.1.12",
+            "version": "5.1.13",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/a2f6fe4ec2fafb747735deafb72a2b929b80d60e",
-                "reference": "a2f6fe4ec2fafb747735deafb72a2b929b80d60e",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/cc9616d067f1650845603eeb0adacf685e0565ab",
+                "reference": "cc9616d067f1650845603eeb0adacf685e0565ab",
                 "shasum": ""
             },
             "require": {
@@ -3036,7 +3036,7 @@
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
                 "source": "https://github.com/nystudio107/craft-seomatic"
             },
-            "time": "2025-04-04T02:36:35+00:00"
+            "time": "2025-04-24T23:56:25+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -4465,17 +4465,40 @@
         },
         {
             "name": "spomky-labs/pki-framework",
-            "version": "1.2.2",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Spomky-Labs/pki-framework.git",
+                "reference": "5ff1dcc21e961b60149a80e77f744fc047800b31"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spomky-Labs/pki-framework/zipball/5ac374c3e295c8b917208ff41b4d30f76668478c",
-                "reference": "5ac374c3e295c8b917208ff41b4d30f76668478c",
+                "url": "https://api.github.com/repos/Spomky-Labs/pki-framework/zipball/5ff1dcc21e961b60149a80e77f744fc047800b31",
+                "reference": "5ff1dcc21e961b60149a80e77f744fc047800b31",
                 "shasum": ""
             },
             "require": {
-                "brick/math": "^0.10|^0.11|^0.12",
+                "brick/math": "^0.10|^0.11|^0.12|^0.13",
                 "ext-mbstring": "*",
                 "php": ">=8.1"
+            },
+            "require-dev": {
+                "ekino/phpstan-banned-code": "^1.0|^2.0|^3.0",
+                "ext-gmp": "*",
+                "ext-openssl": "*",
+                "infection/infection": "^0.28|^0.29",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "phpstan/extension-installer": "^1.3|^2.0",
+                "phpstan/phpstan": "^1.8|^2.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0|^2.0",
+                "phpstan/phpstan-phpunit": "^1.1|^2.0",
+                "phpstan/phpstan-strict-rules": "^1.3|^2.0",
+                "phpunit/phpunit": "^10.1|^11.0|^12.0",
+                "rector/rector": "^1.0|^2.0",
+                "roave/security-advisories": "dev-latest",
+                "symfony/string": "^6.4|^7.0",
+                "symfony/var-dumper": "^6.4|^7.0",
+                "symplify/easy-coding-standard": "^12.0"
             },
             "suggest": {
                 "ext-bcmath": "For better performance (or GMP)",
@@ -4488,6 +4511,7 @@
                     "SpomkyLabs\\Pki\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4532,7 +4556,21 @@
                 "x509",
                 "x690"
             ],
-            "time": "2025-01-03T09:35:48+00:00"
+            "support": {
+                "issues": "https://github.com/Spomky-Labs/pki-framework/issues",
+                "source": "https://github.com/Spomky-Labs/pki-framework/tree/1.2.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Spomky",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/FlorentMorselli",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2025-04-25T15:57:13+00:00"
         },
         {
             "name": "ssnepenthe/color-utils",
@@ -8230,11 +8268,11 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "platform-overrides": {
         "php": "8.2"
     },
