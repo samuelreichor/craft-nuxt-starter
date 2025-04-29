@@ -1,8 +1,5 @@
 export function useSeoMatic() {
-  const page = useRoute()
-  const { data: seoData, error } = useCraftSeoMatic(undefined, {
-    watch: [page],
-  })
+  const { data: seoData, error } = useCraftSeoMatic()
 
   if (error.value) {
     console.error(error.value)
