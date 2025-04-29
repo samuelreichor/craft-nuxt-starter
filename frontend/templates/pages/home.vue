@@ -48,7 +48,7 @@ if (props.relatedNews && props.relatedNews.selectNews.length > 0) {
 }
 const currentSite = useCraftCurrentSite()
 const currentSiteId = computed(() => currentSite.value.id)
-const { data: news, error: newsError } = await useCraftQuery('entries')
+const { data: news, error: newsError } = await useCraftEntry<NewsEntry[]>()
   .id(ids.value)
   .siteId(currentSiteId.value)
   .fields(['headline', 'image', 'richText'])
@@ -74,7 +74,7 @@ if (newsError.value) {
     />
     <RelatedNews
       v-if="props.relatedNews && news"
-      :news="news as NewsEntry[]"
+      :news="news"
       :headline="props.relatedNews.title"
       class="mt-20"
     />

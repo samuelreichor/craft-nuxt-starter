@@ -40,7 +40,7 @@ const currentEntry = inject<Ref<DefaultEntry>>('entry')
 const currentEntryId = computed(() => currentEntry?.value.metadata.id)
 const currentSiteId = computed(() => currentSite.value.id)
 
-const { data: news, error } = await useCraftEntry()
+const { data: news, error } = await useCraftEntry<NewsEntry[]>()
   .section('news')
   .id(['not', currentEntryId.value ?? 0])
   .limit(3)
@@ -69,7 +69,7 @@ if (error.value) {
     />
     <RelatedNews
       v-if="news"
-      :news="news as NewsEntry[]"
+      :news="news"
       headline="More News"
       class="mt-20"
     />

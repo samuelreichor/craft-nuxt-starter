@@ -74,7 +74,7 @@ function splitNewsEntriesById(newsEntries: NewsEntry[], id: number) {
     />
     <RelatedNews
       v-if="newsEntries"
-      :news="newsEntries as NewsEntry[]"
+      :news="newsEntries"
       :headline="props.headline"
       class="mt-20"
     />
