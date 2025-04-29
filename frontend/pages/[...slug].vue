@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Config } from 'vue-craftcms'
+import { useSeoMatic } from '~/composables/useSeoMatic'
 
 // Pages
 import Home from '~/templates/pages/home.vue'
@@ -11,6 +12,9 @@ import ImageText from '~/templates/components/ImageTextBlock.vue'
 import RichText from '~/templates/components/RichTextBlock.vue'
 import Headline from '~/templates/components/HeadlineBlock.vue'
 import Authors from '~/templates/components/AuthorsBlock.vue'
+
+// Set SeoMatic Data
+useSeoMatic()
 
 // Map your Craft CMS data to your vue components and pages
 const mapping: Config = {
