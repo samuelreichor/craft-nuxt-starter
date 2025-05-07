@@ -1,9 +1,3 @@
-import type { MetadataEntry } from '~/types/craftcms'
-import type { ImageObject } from '~/components/Image/image-types'
+import type { CraftPageEntryNews } from '~/types/base'
 
-export type NewsEntry = {
-  metadata: MetadataEntry
-  image: ImageObject
-  richText: string
-  headline: string
-}
+export type NewsEntry = Pick<CraftPageEntryNews, 'metadata' | 'image' | 'headline' | 'richText'>

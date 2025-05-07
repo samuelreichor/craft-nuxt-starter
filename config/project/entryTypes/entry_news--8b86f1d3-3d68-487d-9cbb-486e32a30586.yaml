@@ -44,6 +44,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-02-23T17:18:51+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 613e3fb4-ca6e-40cb-81f9-dfb72e3f0484 # Headline
             handle: null
@@ -51,7 +52,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 081fd48e-79c2-4705-8e30-722b264b7e33
@@ -60,6 +61,7 @@ fieldLayouts:
             width: 50
           -
             dateAdded: '2025-02-23T17:18:51+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 06dcc65a-0360-492d-885c-8cf26a455f95 # Rich Text
             handle: null
@@ -76,6 +78,7 @@ fieldLayouts:
             width: 50
           -
             dateAdded: '2025-02-23T17:18:51+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 03765a14-8035-4d3a-bada-9ec41b6f99e5 # Image
             handle: null
@@ -99,6 +102,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-02-23T17:18:51+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 677c0116-c363-4e74-b5ab-87aaeaaf261d # Content Builder
             handle: null
@@ -121,6 +125,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-02-23T17:38:02+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: f65c8ce7-d94d-40d3-b234-a7504ef26035 # SEO Settings
             handle: null

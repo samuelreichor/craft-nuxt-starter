@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { CraftSites } from 'vue-craftcms'
-import type { DefaultEntry } from '~/types/craftcms'
+import type { CraftEntryMeta } from '~/types/base'
+
+type DefaultEntry = { metadata: CraftEntryMeta }
 
 // Get global defined sitemap
 const { siteMap } = useRuntimeConfig().public.craftcms

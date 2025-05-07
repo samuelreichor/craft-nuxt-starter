@@ -7,6 +7,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-02-15T14:35:10+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 06dcc65a-0360-492d-885c-8cf26a455f95 # Rich Text
             handle: null
@@ -14,7 +15,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 5e5547dc-29e5-4843-b0cd-b2389d4e593f

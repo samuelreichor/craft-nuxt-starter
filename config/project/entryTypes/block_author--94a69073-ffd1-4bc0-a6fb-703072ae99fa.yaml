@@ -7,6 +7,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2024-11-08T14:44:14+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: f58e1976-da02-4678-93be-a8def53fbc4e # Select Users
             handle: null
@@ -14,7 +15,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c522d613-d12d-4e17-ba79-8f2d47ddfc05

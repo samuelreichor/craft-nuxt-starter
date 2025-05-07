@@ -1,12 +1,7 @@
 <script setup lang="ts">
-import type { AuthorObject } from '~/components/Authors/authors-types'
+import type { CraftEntryTypeBlockAuthor } from '~/types/base'
 
-const props = defineProps({
-  selectUsers: {
-    type: Array as PropType<AuthorObject[]>,
-    required: true,
-  },
-})
+const props = defineProps<CraftEntryTypeBlockAuthor>()
 </script>
 
 <template>

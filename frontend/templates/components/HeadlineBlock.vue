@@ -1,16 +1,7 @@
 <script setup lang="ts">
-import type { HeadlineTag } from '~/components/Headline/headline-types'
+import type { CraftEntryTypeBlockHeadline } from '~/types/base'
 
-const props = defineProps({
-  headline: {
-    type: String,
-    required: true,
-  },
-  headlineTag: {
-    type: Object as PropType<HeadlineTag>,
-    required: true,
-  },
-})
+const props = defineProps<CraftEntryTypeBlockHeadline>()
 </script>
 
 <template>

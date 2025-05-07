@@ -1,4 +1,4 @@
-dateModified: 1745777988
+dateModified: 1746370632
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -31,6 +31,7 @@ meta:
     88cdb492-76a1-4a67-902f-08ffc4de6ab8: 'Craft Nuxt' # Craft Nuxt
     94a69073-ffd1-4bc0-a6fb-703072ae99fa: 'Block: Author' # Block: Author
     613e3fb4-ca6e-40cb-81f9-dfb72e3f0484: Headline # Headline
+    627de277-fb25-4508-981e-597fc4c56349: Caption # Caption
     677c0116-c363-4e74-b5ab-87aaeaaf261d: 'Content Builder' # Content Builder
     03765a14-8035-4d3a-bada-9ec41b6f99e5: Image # Image
     5152ea47-9757-4b5b-ac90-92e1beb848e8: 'Single News Entry' # Single News Entry
@@ -61,6 +62,7 @@ plugins:
   query-api:
     edition: standard
     enabled: true
+    licenseKey: VYBERHPRRGYK4ETLTD04DDJW
     schemaVersion: 1.0.0
   quick-edit:
     edition: standard
