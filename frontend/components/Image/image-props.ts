@@ -1,8 +1,9 @@
-import type { ImageObject, ImageRatio, ObjectFitValue } from './image-types'
+import type { CraftAssetRatioValue, ObjectFitValue } from './image-types'
+import type { CraftAsset } from '~/types/base'
 
 export const sharedImageProps = {
   image: {
-    type: Object as PropType<ImageObject>,
+    type: Object as PropType<CraftAsset>,
     required: true,
   },
   lazy: {
@@ -14,7 +15,7 @@ export const sharedImageProps = {
     default: () => 'contain',
   },
   transform: {
-    type: String as PropType<ImageRatio>,
+    type: String as PropType<CraftAssetRatioValue>,
     default: () => 'auto',
   },
 }

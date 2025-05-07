@@ -7,6 +7,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2024-11-07T16:40:07+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 613e3fb4-ca6e-40cb-81f9-dfb72e3f0484 # Headline
             handle: null
@@ -14,7 +15,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 156ec57c-8e05-4add-9226-687607ff28d1
@@ -23,6 +24,7 @@ fieldLayouts:
             width: 50
           -
             dateAdded: '2025-02-15T14:20:45+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 06dcc65a-0360-492d-885c-8cf26a455f95 # Rich Text
             handle: null
@@ -39,6 +41,7 @@ fieldLayouts:
             width: 50
           -
             dateAdded: '2024-11-07T16:39:08+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 03765a14-8035-4d3a-bada-9ec41b6f99e5 # Image
             handle: null
@@ -46,7 +49,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 34a577ab-a40d-4fdf-b455-5ccb218984f7

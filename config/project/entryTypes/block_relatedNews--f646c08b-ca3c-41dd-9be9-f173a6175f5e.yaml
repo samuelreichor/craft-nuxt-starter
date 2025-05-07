@@ -37,6 +37,7 @@ fieldLayouts:
             width: 50
           -
             dateAdded: '2025-02-22T17:23:11+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 4080139d-238b-4990-9747-dc47d0e284e8 # Select News
             handle: null
@@ -44,7 +45,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 58f2f8b3-6a61-4bf8-8d95-d3617fac9901

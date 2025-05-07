@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "00d40ef462a92af3d6cc983d4def5121",
+    "content-hash": "307d83e7eacab5f093a09fef28af3911",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4214,40 +4214,30 @@
         },
         {
             "name": "samuelreichor/craft-query-api",
-            "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/samuelreichor/craft-query-api.git",
-                "reference": "4d713c273a961379a01510a0c2ecb88d7815d938"
-            },
+            "version": "3.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samuelreichor/craft-query-api/zipball/4d713c273a961379a01510a0c2ecb88d7815d938",
-                "reference": "4d713c273a961379a01510a0c2ecb88d7815d938",
+                "url": "https://api.github.com/repos/samuelreichor/craft-query-api/zipball/0a074bcf594d180d3daa11205da48c06993f7277",
+                "reference": "0a074bcf594d180d3daa11205da48c06993f7277",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0",
+                "craftcms/cms": "^5.7.0",
                 "php": ">=8.2"
-            },
-            "require-dev": {
-                "craftcms/ecs": "dev-main",
-                "craftcms/phpstan": "dev-main"
             },
             "type": "craft-plugin",
             "extra": {
-                "name": "Query API",
-                "class": "samuelreichoer\\queryapi\\QueryApi",
                 "handle": "query-api",
+                "name": "Query API",
                 "developer": "Samuel Reichoer",
-                "documentationUrl": "https://samuelreichor.at/libraries/craft-query-api"
+                "documentationUrl": "https://samuelreichor.at/libraries/craft-query-api",
+                "class": "samuelreichoer\\queryapi\\QueryApi"
             },
             "autoload": {
                 "psr-4": {
                     "samuelreichoer\\queryapi\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -4257,7 +4247,7 @@
                 "issues": "https://github.com/samuelreichor/craft-query-api/issues?state=open",
                 "source": "https://github.com/samuelreichor/craft-query-api"
             },
-            "time": "2025-04-17T19:01:32+00:00"
+            "time": "2025-05-04T17:36:58+00:00"
         },
         {
             "name": "samuelreichor/craft-quick-edit",
@@ -8268,11 +8258,11 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.2"
     },

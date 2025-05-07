@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import type { HeadlineValue } from '../Headline/headline-types'
-import type { ImageObject } from '~/components/Image/image-types'
 import RichText from '~/components/RichText/RichText.vue'
+import type { CraftAsset, CraftOptionValueHeadlineTag } from '~/types/base'
 
 const props = defineProps({
   image: {
-    type: Object as PropType<ImageObject>,
+    type: Object as PropType<CraftAsset>,
     required: true,
   },
   title: {
@@ -13,23 +12,27 @@ const props = defineProps({
     required: true,
   },
   introText: {
-    type: String,
+    type: String as PropType<string | null>,
     default: () => '',
   },
   headlineSize: {
-    type: String as PropType<HeadlineValue>,
+    type: String as PropType<CraftOptionValueHeadlineTag>,
     default: () => 'h2',
   },
 })
 </script>
 
 <template>
-  <div class="flex gap-10">
+  <div
+    v-if="props.image && props.title"
+    class="flex gap-10"
+  >
     <div class="w-1/2">
       <Headline :size="props.headlineSize">
         {{ props.title }}
       </Headline>
       <RichText
+        v-if="props.introText"
         class="mt-4 text-lg sm:mt-6"
         :text="props.introText"
       />

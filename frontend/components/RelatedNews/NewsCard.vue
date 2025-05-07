@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ImageObject } from '../Image/image-types'
+import type { CraftAsset } from '~/types/base'
 
 const props = defineProps({
   url: {
@@ -15,7 +15,7 @@ const props = defineProps({
     required: true,
   },
   image: {
-    type: Object as PropType<ImageObject>,
+    type: Object as PropType<CraftAsset>,
     required: true,
   },
 })

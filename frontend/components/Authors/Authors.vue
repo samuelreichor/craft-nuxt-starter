@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import type { AuthorObject } from '~/components/Authors/authors-types'
+import type { CraftUser } from '~/types/base'
 
 const props = defineProps({
   users: {
-    type: Array as PropType<AuthorObject[]>,
+    type: Array as PropType<CraftUser[]>,
     required: true,
   },
 })

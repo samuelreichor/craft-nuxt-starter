@@ -1,46 +1,7 @@
 <script setup lang="ts">
-import type { EntryRelation } from '~/types/craftcms'
-import type { NewsEntry } from '~/components/RelatedNews/news-type'
-import type { ImageObject } from '~/components/Image/image-types'
+import type { CraftPageEntryDefault, CraftPageEntryNews } from '~/types/base'
 
-export type BlockRelatedNews = {
-  title: string
-  selectNews: EntryRelation[]
-}
-const props = defineProps({
-  metadata: {
-    type: Object,
-    required: true,
-  },
-  contentBuilder: {
-    type: Array,
-    required: true,
-  },
-  sectionHandle: {
-    type: String,
-    required: true,
-  },
-  title: {
-    type: String,
-    required: true,
-  },
-  headline: {
-    type: String,
-    required: true,
-  },
-  richText: {
-    type: String,
-    required: true,
-  },
-  image: {
-    type: Object as PropType<ImageObject>,
-    default: () => undefined,
-  },
-  relatedNews: {
-    type: Object as PropType<BlockRelatedNews>,
-    default: () => undefined,
-  },
-})
+const props = defineProps<CraftPageEntryDefault>()
 
 const ids = ref<number[]>([0])
 if (props.relatedNews && props.relatedNews.selectNews.length > 0) {
@@ -48,7 +9,7 @@ if (props.relatedNews && props.relatedNews.selectNews.length > 0) {
 }
 const currentSite = useCraftCurrentSite()
 const currentSiteId = computed(() => currentSite.value.id)
-const { data: news, error: newsError } = await useCraftEntry<NewsEntry[]>()
+const { data: news, error: newsError } = await useCraftEntry<CraftPageEntryNews[]>()
   .id(ids.value)
   .siteId(currentSiteId.value)
   .fields(['headline', 'image', 'richText'])
@@ -64,8 +25,8 @@ if (newsError.value) {
     <ImageText
       v-if="props.image && props.headline"
       :title="props.headline"
-      :intro-text="props.richText"
-      :image="props.image"
+      :intro-text="props.richText ?? ''"
+      :image="props.image ?? null"
       headline-size="h1"
     />
     <CraftArea
@@ -75,7 +36,7 @@ if (newsError.value) {
     <RelatedNews
       v-if="props.relatedNews && news"
       :news="news"
-      :headline="props.relatedNews.title"
+      :headline="props.relatedNews.title ?? ''"
       class="mt-20"
     />
   </div>

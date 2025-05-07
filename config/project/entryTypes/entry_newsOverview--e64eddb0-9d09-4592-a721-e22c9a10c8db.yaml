@@ -44,6 +44,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-02-25T17:46:04+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5152ea47-9757-4b5b-ac90-92e1beb848e8 # Single News Entry
             handle: null
@@ -51,7 +52,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 6c5a8ed6-3fca-482b-8ab7-04a89e9b62af
@@ -66,12 +67,13 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-02-25T17:46:04+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 613e3fb4-ca6e-40cb-81f9-dfb72e3f0484 # Headline
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: 'All News Headline'
             providesThumbs: false
             required: false
             tip: null
@@ -88,6 +90,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-03-16T12:05:21+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: f65c8ce7-d94d-40d3-b234-a7504ef26035 # SEO Settings
             handle: null

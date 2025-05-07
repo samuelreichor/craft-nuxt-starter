@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { HeadlineValue } from '~/components/Headline/headline-types'
+import type { CraftOptionValueHeadlineTag } from '~/types/base'
 
 const props = defineProps({
   size: {
-    type: String as PropType<HeadlineValue>,
+    type: String as PropType<CraftOptionValueHeadlineTag>,
     default: () => 'h2',
   },
   as: {
@@ -12,13 +12,11 @@ const props = defineProps({
   },
 })
 
-const sizes: Record<HeadlineValue, string> = {
+const sizes: Record<CraftOptionValueHeadlineTag, string> = {
   h1: 'h1-styling',
   h2: 'h2-styling',
   h3: 'h3-styling',
   h4: 'h4-styling',
-  h5: 'h5-styling',
-  h6: 'h6-styling',
 }
 </script>
 

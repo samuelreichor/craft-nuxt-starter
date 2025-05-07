@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  type QuickEditResp = {
-    canEdit: boolean
-    linkText: string
-    editUrl: string
-    target: '_self' | '_blank'
-  }
+type QuickEditResp = {
+  canEdit: boolean
+  linkText: string
+  editUrl: string
+  target: '_self' | '_blank'
+}
 
 const fallbackIcon = `
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">

@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const props = defineProps({
-  richText: {
-    type: String,
-    required: true,
-  },
-})
+import type { CraftEntryTypeBlockRichText } from '~/types/base'
+
+const props = defineProps<CraftEntryTypeBlockRichText>()
 </script>
 
 <template>
-  <RichText :text="props.richText" />
+  <RichText
+    v-if="props.richText"
+    :text="props.richText"
+  />
 </template>

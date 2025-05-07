@@ -11,6 +11,10 @@ const props = defineProps({
     default: () => '',
   },
 })
+
+const filteredNews = computed(() =>
+  props.news.filter(entry => entry.image && entry.headline),
+)
 </script>
 
 <template>
@@ -20,13 +24,13 @@ const props = defineProps({
     </Headline>
     <ul class="grid grid-cols-3 gap-4 mt-10">
       <li
-        v-for="newsEntry in props.news"
+        v-for="newsEntry in filteredNews"
         :key="newsEntry.metadata.id"
       >
         <RelatedNewsCard
-          :image="newsEntry.image"
-          :rich-text="newsEntry.richText"
-          :headline="newsEntry.headline"
+          :image="newsEntry.image!"
+          :headline="newsEntry.headline!"
+          :rich-text="newsEntry.richText ?? ''"
           :url="newsEntry.metadata.fullUri"
         />
       </li>

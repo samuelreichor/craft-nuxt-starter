@@ -1,46 +1,14 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
-import type { NewsEntry } from '~/components/RelatedNews/news-type'
-import type { DefaultEntry } from '~/types/craftcms'
-import type { ImageObject } from '~/components/Image/image-types'
+import type { CraftPageEntryNews } from '~/types/base'
 
-const props = defineProps({
-  metadata: {
-    type: Object,
-    required: true,
-  },
-  contentBuilder: {
-    type: Array,
-    required: true,
-  },
-  sectionHandle: {
-    type: String,
-    required: true,
-  },
-  title: {
-    type: String,
-    required: true,
-  },
-  headline: {
-    type: String,
-    required: true,
-  },
-  richText: {
-    type: String,
-    required: true,
-  },
-  image: {
-    type: Object as PropType<ImageObject>,
-    default: () => undefined,
-  },
-})
+const props = defineProps<CraftPageEntryNews>()
 
 const currentSite = useCraftCurrentSite()
-const currentEntry = inject<Ref<DefaultEntry>>('entry')
+const currentEntry = inject<Ref<CraftPageEntryNews>>('entry')
 const currentEntryId = computed(() => currentEntry?.value.metadata.id)
 const currentSiteId = computed(() => currentSite.value.id)
 
-const { data: news, error } = await useCraftEntry<NewsEntry[]>()
+const { data: news, error } = await useCraftEntry<CraftPageEntryNews[]>()
   .section('news')
   .id(['not', currentEntryId.value ?? 0])
   .limit(3)

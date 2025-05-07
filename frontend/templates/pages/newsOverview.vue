@@ -1,30 +1,8 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
 import type { NewsEntry } from '~/components/RelatedNews/news-type'
-import type { EntryRelation } from '~/types/craftcms'
+import type { CraftPageEntryNewsOverview } from '~/types/base'
 
-const props = defineProps({
-  metadata: {
-    type: Object,
-    required: true,
-  },
-  sectionHandle: {
-    type: String,
-    required: true,
-  },
-  title: {
-    type: String,
-    required: true,
-  },
-  headline: {
-    type: String,
-    required: true,
-  },
-  singleNewsEntry: {
-    type: Object as PropType<EntryRelation>,
-    default: () => undefined,
-  },
-})
+const props = defineProps<CraftPageEntryNewsOverview>()
 
 const heroNewsEntry = ref<NewsEntry>()
 const newsEntries = ref<NewsEntry[]>()
@@ -66,7 +44,7 @@ function splitNewsEntriesById(newsEntries: NewsEntry[], id: number) {
 <template>
   <div class="mb-8">
     <ImageText
-      v-if="heroNewsEntry && heroNewsEntry.image && heroNewsEntry.headline"
+      v-if="heroNewsEntry && heroNewsEntry.headline && heroNewsEntry.image"
       :title="heroNewsEntry.headline"
       :intro-text="heroNewsEntry.richText"
       :image="heroNewsEntry.image"
@@ -75,7 +53,7 @@ function splitNewsEntriesById(newsEntries: NewsEntry[], id: number) {
     <RelatedNews
       v-if="newsEntries"
       :news="newsEntries"
-      :headline="props.headline"
+      :headline="props.headline ?? ''"
       class="mt-20"
     />
   </div>
