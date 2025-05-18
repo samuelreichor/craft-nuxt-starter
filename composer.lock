@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "307d83e7eacab5f093a09fef28af3911",
+    "content-hash": "f2892b17dc6c6e98b913c0d73d29964b",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4214,11 +4214,11 @@
         },
         {
             "name": "samuelreichor/craft-query-api",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samuelreichor/craft-query-api/zipball/0a074bcf594d180d3daa11205da48c06993f7277",
-                "reference": "0a074bcf594d180d3daa11205da48c06993f7277",
+                "url": "https://api.github.com/repos/samuelreichor/craft-query-api/zipball/46b3f21a561073166e7711ce3a408291ed4ea3d7",
+                "reference": "46b3f21a561073166e7711ce3a408291ed4ea3d7",
                 "shasum": ""
             },
             "require": {
@@ -4247,7 +4247,7 @@
                 "issues": "https://github.com/samuelreichor/craft-query-api/issues?state=open",
                 "source": "https://github.com/samuelreichor/craft-query-api"
             },
-            "time": "2025-05-04T17:36:58+00:00"
+            "time": "2025-05-17T14:59:09+00:00"
         },
         {
             "name": "samuelreichor/craft-quick-edit",

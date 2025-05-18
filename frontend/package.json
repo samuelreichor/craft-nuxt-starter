@@ -18,7 +18,7 @@
     "@tailwindcss/vite": "^4.0.6",
     "eslint": "^9.21.0",
     "nuxt": "^3.14.159",
-    "nuxt-craftcms": "1.1.0",
+    "nuxt-craftcms": "1.1.1",
     "tailwindcss": "^4.1.4",
     "vue": "latest"
   },
