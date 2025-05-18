@@ -41,7 +41,8 @@
   ],
   "autoload": {
     "psr-4": {
-      "modules\\queryapiextensions\\": "modules/query-api-extensions/"
+      "modules\\queryapiextensions\\": "modules/query-api-extensions/",
+      "modules\\hrpreview\\": "modules/hr-preview/"
     }
   }
 }
