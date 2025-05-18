@@ -1,4 +1,10 @@
+import { useCraftPreview } from '~/composables/useCraftPreview'
+
 export function useSeoMatic() {
+  // no need to set seo information when in live previewing
+  if (useCraftPreview().livePreview) {
+    return
+  }
   const { data: seoData, error } = useCraftSeoMatic()
 
   if (error.value) {

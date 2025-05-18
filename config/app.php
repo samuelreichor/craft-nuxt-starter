@@ -21,8 +21,17 @@
  */
 
 use craft\helpers\App;
+use modules\hrpreview\HrPreview;
 use modules\queryapiextensions\QueryApiExtensions;
 
 return [
-    'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS', 'modules' => ['query-api-extensions' => QueryApiExtensions::class], 'bootstrap' => ['query-api-extensions'],
+    'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS', 
+    'modules' => [
+        'query-api-extensions' => QueryApiExtensions::class, 
+        'hr-preview' => HrPreview::class
+    ], 
+    'bootstrap' => [
+        'query-api-extensions', 
+        'hr-preview'
+    ],
 ];
