@@ -14,15 +14,15 @@
     "test": "npm run typecheck && npm run lint"
   },
   "dependencies": {
-    "@nuxt/eslint": "^1.1.0",
-    "@tailwindcss/vite": "^4.0.6",
-    "eslint": "^9.21.0",
+    "@query-api/nuxt": "^0.0.3",
     "nuxt": "^3.14.159",
-    "nuxt-craftcms": "1.1.1",
-    "tailwindcss": "^4.1.4",
     "vue": "latest"
   },
   "devDependencies": {
+    "tailwindcss": "^4.1.4",
+    "@tailwindcss/vite": "^4.0.6",
+    "eslint": "^9.21.0",
+    "@nuxt/eslint": "^1.1.0",
     "vue-tsc": "^2.1.10"
   },
   "optionalDependencies": {

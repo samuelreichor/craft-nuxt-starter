@@ -2,7 +2,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   modules: [
-    'nuxt-craftcms',
+    '@query-api/nuxt',
     '@nuxt/eslint',
   ],
 
