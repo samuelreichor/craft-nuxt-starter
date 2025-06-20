@@ -14,7 +14,7 @@
     "test": "npm run typecheck && npm run lint"
   },
   "dependencies": {
-    "@query-api/nuxt": "^0.0.3",
+    "@query-api/nuxt": "0.3.2",
     "nuxt": "^3.14.159",
     "vue": "latest"
   },
