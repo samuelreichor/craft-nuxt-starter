@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Config } from 'vue-craftcms'
+import type { ContentMapping } from '@query-api/nuxt'
 import { useSeoMatic } from '~/composables/useSeoMatic'
 
 // Pages
@@ -17,7 +17,7 @@ import Authors from '~/templates/components/AuthorsBlock.vue'
 useSeoMatic()
 
 // Map your Craft CMS data to your vue components and pages
-const mapping: Config = {
+const mapping: ContentMapping = {
   pages: {
     'home:entry_default': Home,
     'news:entry_news': News,

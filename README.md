@@ -46,7 +46,7 @@ within the workspace efficiently. (`ddev npm run dev` does the same as `ddev fe 
 ## Important Security Notes
 
 If you use this as a starter for your own application, be sure to flip the access token! The access token used in that 
-demo project is publicly available and not saved at all.
+demo project is publicly available and not save at all.
 
 ## Further Resources
 

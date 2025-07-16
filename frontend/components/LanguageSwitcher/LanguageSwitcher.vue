@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CraftSites } from 'vue-craftcms'
+import type { CraftSites } from '@query-api/nuxt'
 import type { CraftEntryMeta } from '~/types/base'
 
 type DefaultEntry = { metadata: CraftEntryMeta }
