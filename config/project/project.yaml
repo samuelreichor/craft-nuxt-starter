@@ -1,4 +1,4 @@
-dateModified: 1747586940
+dateModified: 1753027650
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -85,7 +85,7 @@ plugins:
           __assoc__:
             -
               - policy
-              - '''self'''
+              - "'self'"
       devModeCpTitlePrefix: '🚧⚙ '
       devModeTitlePrefix: '🚧 '
       displayAnalysisSidebar: true
@@ -124,5 +124,5 @@ system:
   edition: pro
   live: true
   name: 'Craft Nuxt'
-  schemaVersion: 5.7.0.3
+  schemaVersion: 5.8.0.3
   timeZone: America/Los_Angeles
