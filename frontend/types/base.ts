@@ -107,6 +107,12 @@ export type CraftEntryMeta = {
   cpEditUrl: string
 }
 
+export interface CraftPageBase {
+  metadata: CraftEntryMeta
+  sectionHandle: string
+  title: string
+}
+
 export type CraftTagMeta = {
   id: number
 }
@@ -237,5 +243,7 @@ export type CraftOptionHeadlineTag = {
   label: string
   selected: boolean
   valid: boolean
+  icon: string | null
+  color: string | null
   value: CraftOptionValueHeadlineTag
 }
