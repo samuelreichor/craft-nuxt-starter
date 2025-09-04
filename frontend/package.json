@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@query-api/nuxt": "0.4.1",
-    "nuxt": "^3.14.159",
+    "nuxt": "^4.0.0",
     "vue": "latest"
   },
   "devDependencies": {
