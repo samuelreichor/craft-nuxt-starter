@@ -13,6 +13,9 @@ const setFocalPoint = () => {
 function calculateHeight(width: number, ratio: CraftAssetRatioValue) {
   if (ratio === 'auto') return props.image?.height
   const [ratioWidth, ratioHeight] = ratio.split(':').map(Number)
+  if (!ratioHeight || !ratioWidth) {
+    return 'auto'
+  }
   return (width * ratioHeight) / ratioWidth
 }
 
