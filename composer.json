@@ -3,12 +3,12 @@
   "prefer-stable": true,
   "require": {
     "craftcms/ckeditor": "4.10.1",
-    "craftcms/cms": "5.8.16",
+    "craftcms/cms": "5.8.17",
     "nystudio107/craft-seomatic": "5.1.17",
-    "samuelreichor/craft-query-api": "3.2.0",
+    "samuelreichor/craft-query-api": "3.5.1",
     "samuelreichor/craft-quick-edit": "5.2.2",
     "spacecatninja/imager-x": "5.1.6",
-    "verbb/navigation": "3.0.12",
+    "verbb/navigation": "3.0.13",
     "vlucas/phpdotenv": "5.6.1"
   },
   "require-dev": {

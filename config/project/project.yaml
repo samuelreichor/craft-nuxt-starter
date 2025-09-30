@@ -1,4 +1,4 @@
-dateModified: 1753027650
+dateModified: 1759259195
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -58,11 +58,11 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: $PLUGIN_NAVIGATION
-    schemaVersion: 2.1.0
+    schemaVersion: 2.1.1
   query-api:
     edition: standard
     enabled: true
-    licenseKey: VYBERHPRRGYK4ETLTD04DDJW
+    licenseKey: $PLUGIN_QUERY_API
     schemaVersion: 1.0.0
   quick-edit:
     edition: standard

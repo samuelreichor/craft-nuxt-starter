@@ -3,8 +3,11 @@
 echo "Starting DDEV..."
 ddev start --skip-hooks
 
+echo "Setting up root environment variables..."
+ddev exec cp .env.example .env
+
 echo "Installing Composer packages and setting up Craft CMS..."
-ddev composer install && ddev craft setup/keys
+ddev composer install && ddev craft setup/keys --interactive=0
 
 echo "Importing dummy database..."
 ddev import-db --file=./databases/starter-db.sql
