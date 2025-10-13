@@ -1,0 +1,36 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./.coolify/web/Dockerfile
+      args:
+        - php_version=8.3
+    volumes:
+      - assets_data:/app/web/assets
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: .
+      dockerfile: ./.coolify/node/Dockerfile
+
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_USER: db
+      MYSQL_PASSWORD: db
+      MYSQL_ROOT_PASSWORD: db
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 1s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  db_data:
+  assets_data::
