@@ -7,7 +7,7 @@ webserver_type: nginx-fpm
 xdebug_enabled: false
 database:
   type: mysql
-  version: "8.0"
+  version: "8.4"
 use_dns_when_possible: true
 composer_version: "2"
 corepack_enable: false
