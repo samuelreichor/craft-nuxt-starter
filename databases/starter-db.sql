@@ -809,7 +809,7 @@ CREATE TABLE `imagetransformindex` (
   `uid` char(36) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `idx_ltbfrgthzkhzepdumstqulszsijzbtwiyfzx` (`assetId`,`transformString`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1358,7 +1358,7 @@ CREATE TABLE `sessions` (
   KEY `idx_uqwotasqdjqtzqpekzgtcdsqkejtnogvwdrl` (`dateUpdated`),
   KEY `idx_ywcvvsbsiezxkccqxsnquqvcqtbvmkvphjmb` (`userId`),
   CONSTRAINT `fk_dmlcowqucpzxxbmvzlwguiisetapntsimrad` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1880,7 +1880,7 @@ CREATE TABLE `widgets` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-09-30 21:23:17
+-- Dump completed on 2025-12-10 20:19:13
 -- MySQL dump 10.13  Distrib 8.0.40, for Linux (aarch64)
 --
 -- Host: db    Database: db
@@ -2250,7 +2250,7 @@ commit;
 LOCK TABLES `info` WRITE;
 /*!40000 ALTER TABLE `info` DISABLE KEYS */;
 set autocommit=0;
-INSERT INTO `info` VALUES (1,'5.8.17','5.8.0.3',0,'nnaaoaryagfi','3@cealipabhb','2024-11-07 16:27:01','2025-09-30 19:15:52','4965b6eb-7d49-4bd7-9ef3-2f4ac8887f39');
+INSERT INTO `info` VALUES (1,'5.8.21','5.8.0.3',0,'nnaaoaryagfi','3@cealipabhb','2024-11-07 16:27:01','2025-12-10 19:17:48','4965b6eb-7d49-4bd7-9ef3-2f4ac8887f39');
 /*!40000 ALTER TABLE `info` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -2310,7 +2310,7 @@ commit;
 LOCK TABLES `plugins` WRITE;
 /*!40000 ALTER TABLE `plugins` DISABLE KEYS */;
 set autocommit=0;
-INSERT INTO `plugins` VALUES (7,'seomatic','5.1.17','3.0.13','2025-02-16 15:15:43','2025-02-16 15:15:43','2025-09-30 18:57:33','5b2a77dd-ee64-46d3-ae08-42791d774332'),(8,'imager-x','5.1.6','4.0.0','2025-02-16 15:15:59','2025-02-16 15:15:59','2025-09-30 18:57:33','96c220b9-5f65-4343-ab22-f38b110c7e20'),(9,'quick-edit','5.2.2','1.0.0','2025-02-16 15:16:02','2025-02-16 15:16:02','2025-06-20 20:19:58','a7f6c84a-367c-4c78-b30e-41395dfb4386'),(10,'ckeditor','4.10.1','3.0.0.0','2025-02-16 15:16:07','2025-02-16 15:16:07','2025-09-30 18:57:33','2bf51218-87c0-412c-afe8-45d7c3fa4f16'),(12,'navigation','3.0.13','2.1.1','2025-02-25 19:06:28','2025-02-25 19:06:28','2025-09-30 19:14:04','20187f3c-a0fd-432c-b621-3a1b78b59750'),(13,'query-api','3.5.1','1.0.0','2025-03-25 19:19:21','2025-03-25 19:19:21','2025-09-30 19:14:04','6581b47b-a466-46b9-97e0-9a1c25d0ae9a');
+INSERT INTO `plugins` VALUES (7,'seomatic','5.1.19','3.0.13','2025-02-16 15:15:43','2025-02-16 15:15:43','2025-12-10 19:17:49','5b2a77dd-ee64-46d3-ae08-42791d774332'),(8,'imager-x','5.1.7','4.0.0','2025-02-16 15:15:59','2025-02-16 15:15:59','2025-12-10 19:17:49','96c220b9-5f65-4343-ab22-f38b110c7e20'),(9,'quick-edit','5.2.2','1.0.0','2025-02-16 15:16:02','2025-02-16 15:16:02','2025-06-20 20:19:58','a7f6c84a-367c-4c78-b30e-41395dfb4386'),(10,'ckeditor','4.11.0','3.0.0.0','2025-02-16 15:16:07','2025-02-16 15:16:07','2025-12-10 19:17:49','2bf51218-87c0-412c-afe8-45d7c3fa4f16'),(12,'navigation','3.0.15','2.1.1','2025-02-25 19:06:28','2025-02-25 19:06:28','2025-12-10 19:17:49','20187f3c-a0fd-432c-b621-3a1b78b59750'),(13,'query-api','3.7.0','1.0.0','2025-03-25 19:19:21','2025-03-25 19:19:21','2025-12-10 19:17:49','6581b47b-a466-46b9-97e0-9a1c25d0ae9a');
 /*!40000 ALTER TABLE `plugins` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -2679,7 +2679,7 @@ commit;
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 set autocommit=0;
-INSERT INTO `users` VALUES (1,90,NULL,1,0,0,0,1,'admin','Samuel Reichör','Samuel','Reichör','samuelreichor@gmail.com','$2y$13$rMreXSrnaelwWtfceN4Lk.td7yHaOaAruwFG4NQdJRDM0sxsj7mKe','2025-09-30 19:11:27',NULL,NULL,NULL,'2025-02-15 10:41:37',NULL,1,NULL,NULL,NULL,0,'2024-11-07 16:27:02','2024-11-07 16:27:02','2025-09-30 19:11:27');
+INSERT INTO `users` VALUES (1,90,NULL,1,0,0,0,1,'admin','Samuel Reichör','Samuel','Reichör','samuelreichor@gmail.com','$2y$13$rMreXSrnaelwWtfceN4Lk.td7yHaOaAruwFG4NQdJRDM0sxsj7mKe','2025-12-10 19:17:09',NULL,NULL,NULL,'2025-02-15 10:41:37',NULL,1,NULL,NULL,NULL,0,'2024-11-07 16:27:02','2024-11-07 16:27:02','2025-12-10 19:17:09');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -2744,4 +2744,4 @@ commit;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-09-30 21:23:17
+-- Dump completed on 2025-12-10 20:19:14

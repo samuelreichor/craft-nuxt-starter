@@ -11,6 +11,7 @@ database:
 use_dns_when_possible: true
 composer_version: "2"
 corepack_enable: false
+disable_settings_management: true
 upload_dirs:
   - uploads
 router_http_port: "80"
