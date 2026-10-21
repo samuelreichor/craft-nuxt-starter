@@ -1,4 +1,4 @@
-dateModified: 1759259195
+dateModified: 1792583122
 email:
   fromEmail: samuelreichor@gmail.com
   fromName: 'Craft Nuxt'
@@ -25,7 +25,6 @@ meta:
     31f620da-7617-49ed-be03-9ff85694c893: Images # Images
     34d5e048-0128-4fc4-abf3-0414145729f2: 'Block: Image Text' # Block: Image Text
     49e9100f-d9e4-4289-88ec-d8711b06ef1a: 'Headline Tag' # Headline Tag
-    56ac54ae-5bb8-4d51-9e2a-940afa549231: Simple # Simple
     67f337ce-7f25-49a1-ae63-41369285d1e0: 'Main Navigation' # Main Navigation
     69ae9356-f1fd-4bbc-8239-816ba3795819: DE # DE
     88cdb492-76a1-4a67-902f-08ffc4de6ab8: 'Craft Nuxt' # Craft Nuxt
@@ -48,7 +47,7 @@ plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.0.0
+    schemaVersion: 5.6.0.0
   imager-x:
     edition: pro
     enabled: true
@@ -58,7 +57,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: $PLUGIN_NAVIGATION
-    schemaVersion: 2.1.1
+    schemaVersion: 4.0.10
   query-api:
     edition: standard
     enabled: true
@@ -124,5 +123,5 @@ system:
   edition: pro
   live: true
   name: 'Craft Nuxt'
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.11.0.2
   timeZone: America/Los_Angeles

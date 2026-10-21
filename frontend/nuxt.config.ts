@@ -40,6 +40,7 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
     server: {
+      allowedHosts: ['.ddev.site'],
       hmr: {
         protocol: 'wss',
       },

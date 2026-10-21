@@ -11,10 +11,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 613e3fb4-ca6e-40cb-81f9-dfb72e3f0484 # Headline
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -28,10 +26,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 49e9100f-d9e4-4289-88ec-d8711b06ef1a # Headline Tag
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

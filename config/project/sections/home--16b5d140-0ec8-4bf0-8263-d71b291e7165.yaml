@@ -5,19 +5,13 @@ entryTypes:
     uid: 27541a86-a923-489e-a772-e7081c0ec88a # Entry: Default
 handle: home
 maxAuthors: 1
+minAuthors: 1
 name: Home
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - urlFormat
-        - '{url}'
-      -
-        - refresh
-        - ''
+    label: 'Primary entry page'
+    refresh: ''
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   17b8e90a-bb07-4ebb-b17a-e9897728cdc8: # EN

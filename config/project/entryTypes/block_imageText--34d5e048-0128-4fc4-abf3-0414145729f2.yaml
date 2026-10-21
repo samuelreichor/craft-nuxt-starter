@@ -11,10 +11,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 613e3fb4-ca6e-40cb-81f9-dfb72e3f0484 # Headline
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -28,10 +26,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 06dcc65a-0360-492d-885c-8cf26a455f95 # Rich Text
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -45,10 +41,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 03765a14-8035-4d3a-bada-9ec41b6f99e5 # Image
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField

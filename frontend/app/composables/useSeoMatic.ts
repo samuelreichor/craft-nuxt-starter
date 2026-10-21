@@ -1,3 +1,4 @@
+import type { ResolvableLink, ResolvableMeta } from '@unhead/vue'
 import { useCraftPreview } from '~/composables/useCraftPreview'
 
 export function useSeoMatic() {
@@ -13,8 +14,8 @@ export function useSeoMatic() {
 
   const currentSite = useCraftCurrentSite()
   const title = computed(() => seoData.value?.title ?? '')
-  const meta = computed(() => seoData.value?.metaTags ?? [])
-  const link = computed(() => seoData.value?.linkTags ?? [])
+  const meta = computed(() => (seoData.value?.metaTags ?? []) as ResolvableMeta[])
+  const link = computed(() => (seoData.value?.linkTags ?? []) as ResolvableLink[])
   const jsonLd = computed(() => seoData.value?.jsonLd ?? {})
   const lang = computed(() => currentSite.value.lang)
 
