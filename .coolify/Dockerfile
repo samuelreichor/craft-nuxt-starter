@@ -95,6 +95,9 @@ RUN install-php-extensions bcmath gd intl Imagick/imagick@3.8.1 \
 COPY --chmod=755 .coolify/mariadb-client.sh /usr/local/bin/mysqldump
 COPY --chmod=755 .coolify/mariadb-client.sh /usr/local/bin/mysql
 
+# Serves Craft and proxies everything else to the nuxt service on the same domain.
+COPY .coolify/nginx/http.conf.template /etc/nginx/site-opts.d/http.conf.template
+
 WORKDIR /app
 
 COPY . .

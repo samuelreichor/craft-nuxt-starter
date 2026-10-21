@@ -1,0 +1,119 @@
+# Replaces serversideup's /etc/nginx/site-opts.d/http.conf.template so Craft and
+# Nuxt can share one domain: Craft paths are handled by PHP, everything else is
+# proxied to the nuxt service. Only ${NGINX_*}, ${PHP_*}, … are substituted at
+# container start, plain nginx variables like $uri stay untouched.
+listen ${NGINX_HTTP_PORT} default_server;
+listen [::]:${NGINX_HTTP_PORT} default_server;
+
+root $NGINX_WEBROOT;
+
+index index.html index.htm index.php;
+
+server_name _;
+
+charset utf-8;
+
+absolute_redirect off;
+
+# Resolve the nuxt service at request time via Docker's DNS, so nginx still
+# starts when the nuxt container isn't up yet.
+resolver 127.0.0.11 valid=10s ipv6=off;
+set $nuxt_upstream http://nuxt:3000;
+
+location /healthcheck {
+    access_log off;
+
+    fastcgi_read_timeout 5s;
+
+    include        fastcgi_params;
+    fastcgi_param  SCRIPT_NAME     /healthcheck;
+    fastcgi_param  SCRIPT_FILENAME /healthcheck;
+    fastcgi_pass   127.0.0.1:9000;
+}
+
+# Craft CMS
+location ~ ^/v[0-9]+/api/ {
+    try_files $uri /index.php?$query_string;
+}
+
+location ~ ^/(.+/)?actions/ {
+    try_files $uri /index.php?$query_string;
+}
+
+location /admin {
+    try_files $uri $uri/ /index.php?$query_string;
+}
+
+location /gql {
+    try_files $uri /index.php?$query_string;
+}
+
+location ~ ^/(sitemap.*|robots\.txt|humans\.txt|ads\.txt|security\.txt)$ {
+    try_files $uri /index.php?$query_string;
+}
+
+location ^~ /assets/ {
+    try_files $uri /index.php?$query_string;
+}
+
+location ^~ /cpresources/ {
+    try_files $uri /index.php?$query_string;
+}
+
+location ^~ /static/ {
+    try_files $uri /index.php?$query_string;
+}
+
+location ^~ /uploads/ {
+    try_files $uri /index.php?$query_string;
+}
+
+# Nuxt
+location / {
+    try_files /nonexistent @nuxt;
+}
+
+# ^~ so Nuxt's build assets win over the static file regex in server-opts.d,
+# which would otherwise look for them in Craft's webroot.
+location ^~ /_nuxt/ {
+    try_files /nonexistent @nuxt;
+}
+
+location ^~ /__nuxt {
+    try_files /nonexistent @nuxt;
+}
+
+location @nuxt {
+    proxy_pass $nuxt_upstream;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $http_x_forwarded_proto;
+    proxy_cache_bypass $http_upgrade;
+}
+
+# Block PHP execution in storage directory to prevent uploaded malicious PHP files from running
+location ~* ^/storage/.*\.php(?:/|$) {
+    deny all;
+}
+
+location ~ ^/index\.php(/.+)$ {
+    return 301 $1$is_args$args;
+}
+
+location ~ \.php$ {
+    fastcgi_pass   127.0.0.1:9000;
+    fastcgi_index  index.php;
+    fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+    include        fastcgi_params;
+    fastcgi_buffers $NGINX_FASTCGI_BUFFERS;
+    fastcgi_buffer_size $NGINX_FASTCGI_BUFFER_SIZE;
+    fastcgi_read_timeout $PHP_MAX_EXECUTION_TIME;
+}
+
+include /etc/nginx/trusted-proxy/${TRUSTED_PROXY}.conf;
+
+include /etc/nginx/server-opts.d/*.conf;
