@@ -55,7 +55,8 @@ USER root
 
 # bcmath required by craftcms/cms + moneyphp/money, gd required by phpoffice/phpspreadsheet,
 # intl required by craftcms/cms, imagick for Craft's image transforms.
-RUN install-php-extensions bcmath gd intl imagick
+# imagick is built from GitHub instead of PECL, which regularly times out.
+RUN install-php-extensions bcmath gd intl Imagick/imagick@3.8.1
 
 ### Stage 3b: Composer Dependencies
 # Resolves PHP packages once and is reused by web + queue stages.
@@ -87,7 +88,7 @@ ENV NGINX_WEBROOT=/app/web
 ENV PHP_OPCACHE_ENABLE=1
 
 # mariadb-connector + mysql-client are needed for craft db/backup + mysqldump.
-RUN install-php-extensions bcmath gd intl imagick \
+RUN install-php-extensions bcmath gd intl Imagick/imagick@3.8.1 \
   && apk add --no-cache git unzip bash vim mariadb-connector-c mysql-client
 
 WORKDIR /app
