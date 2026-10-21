@@ -91,6 +91,10 @@ ENV PHP_OPCACHE_ENABLE=1
 RUN install-php-extensions bcmath gd intl Imagick/imagick@3.8.1 \
   && apk add --no-cache git unzip bash vim mariadb-connector-c mysql-client
 
+# Lets Craft's db backups/restores connect to MySQL's self-signed TLS cert.
+COPY --chmod=755 .coolify/mariadb-client.sh /usr/local/bin/mysqldump
+COPY --chmod=755 .coolify/mariadb-client.sh /usr/local/bin/mysql
+
 WORKDIR /app
 
 COPY . .
@@ -109,6 +113,9 @@ USER www-data
 FROM cli-base AS queue
 
 RUN apk add --no-cache git unzip bash mariadb-connector-c mysql-client
+
+COPY --chmod=755 .coolify/mariadb-client.sh /usr/local/bin/mysqldump
+COPY --chmod=755 .coolify/mariadb-client.sh /usr/local/bin/mysql
 
 WORKDIR /app
 
