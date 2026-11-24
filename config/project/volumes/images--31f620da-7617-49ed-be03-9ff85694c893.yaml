@@ -79,6 +79,7 @@ fieldLayouts:
 fs: images
 handle: images
 name: Images
+propagationMethod: all
 sortOrder: 1
 subpath: ''
 titleTranslationKeyFormat: null
